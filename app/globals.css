@@ -1,7 +1,29 @@
+@import "tailwindcss";
+
 @theme {
     /* Typography tokens -> font-sans, font-display */
     --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
     --font-display: var(--font-sans);
+
+    --text-sm: 0.875rem; /* 14px */
+    --text-base: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-3xl: 1.875rem; /* 30px */
+    --text-5xl: 3rem;
+
+    --leading-tight: 1.25;
+    --tracking-tight: -0.025em;
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500; /* ✅ for font-medium */
+    --font-weight-semibold: 600; /* for font-semibold */
+    --font-weight-bold: 700; /* for font-bold */
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
 
     /* Color tokens -> bg-primary, text-fg, border-border, etc. */
     --color-bg: #fafafa;
@@ -11,6 +33,8 @@
     --color-secondary: #10b981; /* emerald-500 */
     --color-accent: #f472b6; /* pink-400 */
     --color-border: #e5e7eb; /* slate-200 */
+    --color-white: 255 255 255; /* ✅ for text-white, bg-white */
+    --color-black: 0 0 0;
 
     /* Radius tokens -> rounded-lg/xl/2xl */
     --radius-lg: 10px;
@@ -23,95 +47,7 @@
     --spacing-2: 8px;
     --spacing-3: 12px;
     --spacing-4: 16px;
-    --spacing-6: 24px;
-    --spacing-8: 32px;
-    --spacing-10: 40px;
-    --spacing-12: 48px;
-    --spacing-16: 64px;
-    --spacing-20: 80px;
-    --spacing-24: 96px;
-    --spacing-32: 128px;
-
-    /* Shadow tokens -> shadow-soft */
-    --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.12);
-
-    /* Breakpoints -> sm:, md:, lg:, xl: */
-    --breakpoint-sm: 640px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1280px;
-}
-
-/* App-level CSS variables for ad-hoc arbitrary values */
-:root {
-    --container: 1200px; /* use with: max-w-[var(--container)] */
-    --section-y: 120px; /* use with: pt-[var(--section-y)] pb-[var(--section-y)] */
-}
-
-/***** Base resets aligning with Figma pixel grid *****/
-html,
-body,
-#__next {
-    height: 100%;
-}
-body {
-    @apply bg-bg text-fg antialiased;
-}
-
-/* Container helper (since Tailwind v4 doesn't ship a container plugin by default) */
-.container {
-    max-width: var(--container);
-}
-
-/* ===============================
-   Custom Tailwind-like utilities
-   =============================== */
-@utility btn {
-    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg;
-}
-
-@utility btn-primary {
-    @apply btn bg-primary text-white hover:opacity-90 focus:ring-primary;
-}
-
-@utility btn-secondary {
-    @apply btn bg-secondary text-white hover:opacity-90 focus:ring-secondary;
-}
-
-@utility btn-ghost {
-    @apply btn bg-transparent text-fg hover:bg-fg/5 focus:ring-fg/20;
-}
-
-@utility section-wrapper {
-    padding-top: var(--section-y);
-    padding-bottom: var(--section-y);
-    @apply px-6 md:px-8;
-}
-@theme {
-    /* Typography tokens -> font-sans, font-display */
-    --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
-    --font-display: var(--font-sans);
-
-    /* Color tokens -> bg-primary, text-fg, border-border, etc. */
-    --color-bg: #fafafa;
-    --color-fg: #111827; /* slate-900-ish */
-    --color-muted: #6b7280; /* slate-500 */
-    --color-primary: #007aff; /* brand */
-    --color-secondary: #10b981; /* emerald-500 */
-    --color-accent: #f472b6; /* pink-400 */
-    --color-border: #e5e7eb; /* slate-200 */
-
-    /* Radius tokens -> rounded-lg/xl/2xl */
-    --radius-lg: 10px;
-    --radius-xl: 16px;
-    --radius-2xl: 24px;
-
-    /* Spacing scale -> p-6, gap-8, etc. (escape the dot for 0.5) */
-    --spacing-0\.5: 2px;
-    --spacing-1: 4px;
-    --spacing-2: 8px;
-    --spacing-3: 12px;
-    --spacing-4: 16px;
+    --spacing-5: 20px;
     --spacing-6: 24px;
     --spacing-8: 32px;
     --spacing-10: 40px;
