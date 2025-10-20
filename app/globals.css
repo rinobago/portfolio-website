@@ -49,6 +49,7 @@
     --color-primary: #8b5cf6; /* brand */
     --color-secondary: #c084fc; /* emerald-500 */
     --color-accent: #e9d5ff; /* pink-400 */
+    --color-gold: #d4af37;
     --color-border: #26292f; /* slate-200 */
     --color-card: #1a1c20;
     --color-white: 255 255 255; /* ✅ for text-white, bg-white */
@@ -82,6 +83,7 @@
     --spacing-48: 192px;
     --spacing-56: 224px;
     --spacing-64: 256px;
+    --spacing-section: 300px;
 
     /* Shadow tokens -> shadow-soft */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -100,7 +102,7 @@
 
 /* App-level CSS variables for ad-hoc arbitrary values */
 :root {
-    --container: 1174; /* use with: max-w-[var(--container)] */
+    --container: 1320px; /* use with: max-w-[var(--container)] */
     --section-y: 120px; /* use with: pt-[var(--section-y)] pb-[var(--section-y)] */
 }
 
@@ -111,35 +113,56 @@ body,
     height: 100%;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     @apply bg-bg text-fg font-sans antialiased;
-}
-
-/* Container helper (since Tailwind v4 doesn't ship a container plugin by default) */
-.container {
-    max-width: var(--container);
 }
 
 /* ===============================
    Custom Tailwind-like utilities
    =============================== */
+@utility section-padding {
+    @apply px-[var(--spacing-section)];
+}
+
+@utility maxw-container {
+    @apply max-w-[var(--container)];
+}
+
+@utility navbar-div-desktop {
+    @apply bg-bg/70 backdrop-blur-[30px] fixed border-b-1 border-border w-full flex justify-center;
+}
+
+@utility navbar-desktop {
+    @apply flex justify-between basis-[var(--container)] py-[1.06rem] h-[5.625rem];
+}
+
+@utility hero {
+    @apply w-full flex pt-40 maxw-container h-auto;
+}
+
 @utility btn {
-    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg;
+    @apply inline-flex items-center justify-center rounded-[50] px-[18px] py-[13px] text-base font-semibold focus:outline-none;
 }
 
 @utility btn-primary {
-    @apply btn bg-primary text-white hover:opacity-90 focus:ring-primary;
+    @apply btn bg-primary text-fg;
 }
 
-@utility btn-secondary {
-    @apply btn bg-secondary text-white hover:opacity-90 focus:ring-secondary;
+@utility btn-primary-outline {
+    @apply btn bg-transparent border-primary border-2 text-primary;
+}
+
+@utility btn-secondary-outline {
+    @apply btn bg-transparent border-secondary border-2 text-secondary;
 }
 
 @utility btn-ghost {
     @apply btn bg-transparent text-fg hover:bg-fg/5 focus:ring-fg/20;
 }
 
-@utility section-wrapper {
-    padding-top: var(--section-y);
-    padding-bottom: var(--section-y);
-    @apply px-6 md:px-8;
+@utility circle {
+    @apply rounded-full bg-primary;
 }
