@@ -1,19 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 @import "tailwindcss";
 
 @theme {
     /* Typography tokens -> font-sans, font-display */
-    --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+    --font-sans: "Sora", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
     --font-display: var(--font-sans);
 
     --text-sm: 0.875rem; /* 14px */
     --text-base: 1rem; /* 16px */
     --text-lg: 1.125rem; /* 18px */
     --text-xl: 1.25rem; /* 20px */
-    --text-3xl: 1.875rem; /* 30px */
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
     --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
 
+    /* line heights (→ leading-tight, leading-relaxed, etc.) */
+    --leading-none: 1;
     --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    /* letter spacing (→ tracking-tight, tracking-wide, etc.) */
+    --tracking-tighter: -0.05em;
     --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
 
     --font-weight-thin: 100;
     --font-weight-extralight: 200;
@@ -26,22 +43,27 @@
     --font-weight-black: 900;
 
     /* Color tokens -> bg-primary, text-fg, border-border, etc. */
-    --color-bg: #fafafa;
-    --color-fg: #111827; /* slate-900-ish */
-    --color-muted: #6b7280; /* slate-500 */
-    --color-primary: #007aff; /* brand */
-    --color-secondary: #10b981; /* emerald-500 */
-    --color-accent: #f472b6; /* pink-400 */
-    --color-border: #e5e7eb; /* slate-200 */
+    --color-bg: #0f1115;
+    --color-fg: #e6e8eb; /* slate-900-ish */
+    --color-muted: #9ca3af; /* slate-500 */
+    --color-primary: #8b5cf6; /* brand */
+    --color-secondary: #c084fc; /* emerald-500 */
+    --color-accent: #e9d5ff; /* pink-400 */
+    --color-border: #26292f; /* slate-200 */
+    --color-card: #1a1c20;
     --color-white: 255 255 255; /* ✅ for text-white, bg-white */
     --color-black: 0 0 0;
 
     /* Radius tokens -> rounded-lg/xl/2xl */
-    --radius-lg: 10px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
     --radius-xl: 16px;
     --radius-2xl: 24px;
+    --radius-full: 9999px;
 
     /* Spacing scale -> p-6, gap-8, etc. (escape the dot for 0.5) */
+    --spacing-0: 0px;
     --spacing-0\.5: 2px;
     --spacing-1: 4px;
     --spacing-2: 8px;
@@ -56,8 +78,16 @@
     --spacing-20: 80px;
     --spacing-24: 96px;
     --spacing-32: 128px;
+    --spacing-40: 160px;
+    --spacing-48: 192px;
+    --spacing-56: 224px;
+    --spacing-64: 256px;
 
     /* Shadow tokens -> shadow-soft */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
     --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.12);
 
     /* Breakpoints -> sm:, md:, lg:, xl: */
@@ -65,11 +95,12 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
 }
 
 /* App-level CSS variables for ad-hoc arbitrary values */
 :root {
-    --container: 1200px; /* use with: max-w-[var(--container)] */
+    --container: 1174; /* use with: max-w-[var(--container)] */
     --section-y: 120px; /* use with: pt-[var(--section-y)] pb-[var(--section-y)] */
 }
 
@@ -80,7 +111,7 @@ body,
     height: 100%;
 }
 body {
-    @apply bg-bg text-fg antialiased;
+    @apply bg-bg text-fg font-sans antialiased;
 }
 
 /* Container helper (since Tailwind v4 doesn't ship a container plugin by default) */
