@@ -132,15 +132,39 @@ body {
 }
 
 @utility navbar-div-desktop {
-    @apply bg-bg/70 backdrop-blur-[30px] fixed border-b-1 border-border w-full flex justify-center;
+    @apply z-999 bg-bg/70 backdrop-blur-[30px] fixed border-b-1 border-border w-full flex justify-center;
 }
 
 @utility navbar-desktop {
-    @apply flex justify-between basis-[var(--container)] py-[1.06rem] h-[5.625rem];
+    @apply z-1000 flex justify-between basis-[var(--container)] py-[1.06rem] h-[5.625rem];
 }
 
 @utility hero {
     @apply w-full flex pt-40 maxw-container h-auto;
+}
+
+@utility about {
+    @apply w-full flex gap-[1.563rem] justify-center items-center maxw-container h-auto;
+}
+
+@utility projects {
+    @apply w-full flex flex-col justify-center items-center maxw-container h-auto;
+}
+
+@utility services {
+    @apply w-full flex flex-col justify-center items-center maxw-container h-auto;
+}
+
+@utility ready {
+    @apply w-full flex flex-col justify-center items-center maxw-container h-auto;
+}
+
+@utility reachOut {
+    @apply w-full flex flex-col justify-start items-center maxw-container h-auto;
+}
+
+@utility additionalServices {
+    @apply w-full flex flex-col justify-center items-center maxw-container h-auto;
 }
 
 @utility btn {
@@ -163,6 +187,6 @@ body {
     @apply btn bg-transparent text-fg hover:bg-fg/5 focus:ring-fg/20;
 }
 
-@utility circle {
-    @apply rounded-full bg-primary;
+@utility card {
+    @apply bg-card rounded-[38px] border-border border-1 shadow-[inset_0_2px_6px_rgba(255,255,255,0.08),_0_12px_20px_rgba(0,0,0,0.6)];
 }
