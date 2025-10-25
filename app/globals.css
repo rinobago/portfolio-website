@@ -112,12 +112,51 @@ body,
 #__next {
     height: 100%;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     @apply bg-bg text-fg font-sans antialiased;
+}
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 92, 246, 0.5); /* #8b5cf6/60 */
+    border-radius: 9999px;
+}
+textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+textarea::-webkit-scrollbar-corner {
+    background: transparent;
+    border: none;
+}
+
+/* ===============================
+   Animations
+   =============================== */
+
+@keyframes breathe {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@utility animate-breathe {
+    animation: breathe 8s ease-in-out infinite;
 }
 
 /* ===============================
@@ -132,11 +171,15 @@ body {
 }
 
 @utility navbar-div-desktop {
-    @apply z-999 bg-bg/70 backdrop-blur-[30px] fixed border-b-1 border-border w-full flex justify-center;
+    @apply z-999 bg-bg/70 backdrop-blur-[15px] fixed border-b-1 border-border w-full flex justify-center;
 }
 
 @utility navbar-desktop {
     @apply z-1000 flex justify-between basis-[var(--container)] py-[1.06rem] h-[5.625rem];
+}
+
+@utility footer-desktop {
+    @apply w-full z-1000 bg-bg flex flex-col items-center gap-[2.5rem] py-[2.188rem] h-auto border-t-1 border-border;
 }
 
 @utility hero {
@@ -167,20 +210,58 @@ body {
     @apply w-full flex flex-col justify-center items-center maxw-container h-auto;
 }
 
+@utility ctaSection {
+    @apply w-full flex flex-col justify-center items-center h-auto;
+}
+
+@utility formSection {
+    @apply w-full flex flex-col justify-center items-center h-auto;
+}
+
 @utility btn {
     @apply inline-flex items-center justify-center rounded-[50] px-[18px] py-[13px] text-base font-semibold focus:outline-none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 @utility btn-primary {
     @apply btn bg-primary text-fg;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.btn-primary:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 0 70px rgba(139, 92, 246, 0.35);
+}
+.btn-primary:active {
+    filter: none;
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
 @utility btn-primary-outline {
     @apply btn bg-transparent border-primary border-2 text-primary;
 }
+.btn-primary-outline:hover {
+    background-color: rgb(var(--color-primary) / 0.12);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.25);
+}
+.btn-primary-outline:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
 
 @utility btn-secondary-outline {
     @apply btn bg-transparent border-secondary border-2 text-secondary;
+}
+.btn-secondary-outline:hover {
+    background-color: rgb(var(--color-secondary) / 0.12);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 0 70px rgba(192, 132, 252, 0.25);
+}
+.btn-secondary-outline:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
 @utility btn-ghost {
@@ -189,4 +270,8 @@ body {
 
 @utility card {
     @apply bg-card rounded-[38px] border-border border-1 shadow-[inset_0_2px_6px_rgba(255,255,255,0.08),_0_12px_20px_rgba(0,0,0,0.6)];
+}
+
+@utility blob {
+    @apply z-[-1] absolute inset-0 transform;
 }

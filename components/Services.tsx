@@ -1,6 +1,10 @@
 const Services = () => {
     return (
-        <div className="services mb-44">
+        <div id="services" className="services mb-44 relative scroll-mt-[7rem]">
+            <img src="/PurpleBlob.svg" alt="Purple Blob" className="animate-breathe blob top-[-25%] left-[-60%] scale-x-70 rotate-[-15deg]" />
+            <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "2s" }} className="animate-breathe blob top-[15%] left-[40%] scale-x-70 rotate-[-15deg]" />
+            <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "3s" }} className="animate-breathe blob top-[64%] left-[-20%] scale-x-70 rotate-[-15deg]" />
+            <img src="/GoldBlob.svg" alt="Gold Blob" className="animate-breathe blob top-[73%] left-[50%] opacity-60 scale-x-40 scale-y-80 rotate-[60deg]" />
             <div className="flex flex-col justify-center items-center gap-[115px]">
                 <div className="flex flex-col justify-center items-center gap-8 text-center">
                     <h2 className="text-[3.125rem] font-bold">Services</h2>

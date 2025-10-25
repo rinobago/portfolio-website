@@ -1,5 +1,7 @@
 import About from "@/components/About";
 import AdditionalServices from "@/components/AdditionalServices";
+import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -18,6 +20,8 @@ const Page = () => {
             <Services></Services>
             <ReachOut></ReachOut>
             <AdditionalServices></AdditionalServices>
+            <CtaSection></CtaSection>
+            <Footer></Footer>
         </>
     );
 };

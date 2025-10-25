@@ -6,7 +6,7 @@ const ReachOut = () => {
                     Ready to take your business online? <br />
                     <span className="text-primary">Let's talk.</span>
                 </p>
-                <a href="#" className="btn-primary">
+                <a href="/contact" className="btn-primary">
                     Reach Out
                 </a>
             </div>

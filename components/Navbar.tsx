@@ -3,21 +3,23 @@ const Navbar = () => {
         <div className="navbar-div-desktop">
             <nav className="navbar-desktop">
                 <div className="flex justify-center items-center">
-                    <p className="font-bold">
-                        Rino Bago - <span className="text-primary">Web Developer</span>
-                    </p>
+                    <a href="/#">
+                        <p className="font-bold">
+                            Rino Bago - <span className="text-primary">Web Developer</span>
+                        </p>
+                    </a>
                 </div>
                 <div className="flex gap-[1.25rem] justify-center items-center">
-                    <a href="#" className="text-muted font-semibold">
+                    <a href="/#about" className="text-muted font-semibold">
                         About
                     </a>
-                    <a href="#" className="text-muted font-semibold">
+                    <a href="/#projects" className="text-muted font-semibold">
                         Projects
                     </a>
-                    <a href="#" className="text-muted font-semibold">
+                    <a href="/#services" className="text-muted font-semibold">
                         Services
                     </a>
-                    <a href="#" className="btn-primary-outline">
+                    <a href="/contact" className="btn-primary-outline">
                         Contact
                     </a>
                     <button className="flex gap-3 justify-center items-center cursor-pointer">
