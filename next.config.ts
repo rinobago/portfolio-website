@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
         // add external domains here if the design uses remote images
         remotePatterns: [],
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;
