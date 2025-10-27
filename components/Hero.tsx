@@ -33,14 +33,7 @@ const Hero = () => {
                     </div>
                     <div className="relative w-[326px] h-[326px] flex justify-center [@media(min-width:1115px)]:w-[100px] [@media(min-width:1115px)]:static">
                         <div className="[@media(min-width:1115px)]:right-[0%] absolute">
-                            <Image
-                                src="/MyAvatar.jpg"
-                                alt="Rino Bago image"
-                                width={700}
-                                height={700}
-                                className="w-[45vw] max-w-[700px] min-w-[326px] aspect-square object-cover object-[center_10%] rounded-full absolute top-6 right-6"
-                            ></Image>
-                            <img src="/AvatarPurpleCircle.svg" alt="circle" className="w-[45vw] max-w-[700px] min-w-[326px]" />
+                            <Image src="/MyPhoto.png" alt="Rino Bago image" width={700} height={700} className="w-[45vw] max-w-[700px] min-w-[326px] aspect-square"></Image>
                         </div>
                     </div>
                 </div>
