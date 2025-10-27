@@ -19,7 +19,7 @@ export default function DropdownRow({ title, desc }: DropdownRowProps) {
 
             {/* Mobile (<md): header row is clickable (title + arrow) */}
             <button type="button" aria-expanded={open} onClick={() => setOpen((v) => !v)} className="md:hidden flex w-full items-center justify-between cursor-pointer">
-                <h3 className="text-left font-bold text-[clamp(1rem,6vw,1.5rem)]">{title}</h3>
+                <h3 className="text-left font-bold text-[clamp(1rem,6vw,2rem)]">{title}</h3>
                 <img src="/MenuArrowDown.svg" alt="Toggle details" className={`w-[11.6px] h-[6.1px] transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
             </button>
 

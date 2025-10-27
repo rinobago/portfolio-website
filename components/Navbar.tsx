@@ -8,8 +8,8 @@ const Navbar = () => {
     return (
         <div className="navbar-div-desktop">
             <nav className="navbar-desktop">
-                <div className="block col-start-1 md:hidden justify-self-start w-[26px] opacity-0 pointer-events-none" aria-hidden />
-                <a href="/#" className="col-start-2 justify-self-center md:col-start-1 md:justify-self-start">
+                <div className="block col-start-1 md:hidden max-[340px]:hidden justify-self-start w-[26px] opacity-0 pointer-events-none" aria-hidden />
+                <a href="/#" className="col-start-2 justify-self-center md:col-start-1 max-[340px]:col-start-1 md:justify-self-start">
                     <p className="font-bold">
                         Rino Bago - <span className="text-primary">Web Developer</span>
                     </p>
@@ -34,7 +34,7 @@ const Navbar = () => {
                 </div>
                 <div className="col-start-3 justify-self-end md:hidden">
                     <button aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen((v) => !v)} className="w-[26px] h-[26px] grid place-items-center cursor-pointer">
-                        <img src="/HamburgerIcon.svg" alt="Open menu" className="w-[26px]" />
+                        <img src="/HamburgerIcon.svg" alt="Open menu" className="w-[26px] aspect-square" />
                     </button>
                 </div>
             </nav>

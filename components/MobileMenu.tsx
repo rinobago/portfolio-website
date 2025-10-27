@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { useBodyScrollLock } from "./hooks/BodyLock";
 
 type MobileMenuProps = {
     open: boolean;
@@ -8,12 +9,7 @@ type MobileMenuProps = {
 
 export default function MobileMenu({ open, onClose }: MobileMenuProps) {
     // Lock/unlock scroll
-    useEffect(() => {
-        const html = document.documentElement;
-        if (open) html.classList.add("overflow-hidden");
-        else html.classList.remove("overflow-hidden");
-        return () => html.classList.remove("overflow-hidden");
-    }, [open]);
+    useBodyScrollLock(open);
 
     // Close on Esc
     useEffect(() => {
@@ -25,7 +21,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
     return (
         <div
             className={`
-        md:hidden fixed inset-0 z-[1000]
+        md:hidden fixed inset-0 z-[1000] transition-opacity duration-300
         ${open ? "pointer-events-auto" : "pointer-events-none"}
       `}
             aria-hidden={!open}
@@ -33,7 +29,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
             {/* Panel (slides from right) */}
             <nav
                 className={`
-          absolute inset-y-0 right-0 w-screen h-screen
+          absolute inset-0 w-screen h-screen
           bg-bg border-l border-border
           transition-transform duration-300 ease-out
           ${open ? "translate-x-0" : "translate-x-full"}
@@ -51,8 +47,8 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                     </p>
 
                     {/* X button (same position as hamburger in navbar) */}
-                    <button aria-label="Close menu" onClick={onClose} className="w-[26px] h-[26px] grid place-items-center hover:opacity-90 active:scale-95 transition cursor-pointer">
-                        <span className="text-2xl leading-none select-none">×</span>
+                    <button aria-label="Close menu" onClick={onClose} className="w-[26px] h-[26px] grid place-items-center active:scale-95 transition cursor-pointer">
+                        <img src="/MobileXIcon.svg" alt="Close menu" />
                     </button>
                 </div>
 
