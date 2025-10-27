@@ -1,7 +1,7 @@
 const Projects = () => {
     return (
         <section className="section">
-            <div id="projects" className="projects mb-[213px] md:mb-[330px] relative scroll-mt-[7rem]">
+            <div id="projects" className="projects mb-[213px] md:mb-[330px] relative scroll-mt-[3rem] md:scroll-mt-[7rem]">
                 <img src="/PurpleBlob.svg" alt="Purple Blob" className="animate-breathe blob top-[-50%] left-[-20%] scale-x-85 scale-y-105 rotate-[30deg]" />
                 <img src="/GoldBlob.svg" alt="Gold Blob" style={{ animationDelay: "3s" }} className="animate-breathe blob top-[5%] left-[25%] scale-x-50 scale-y-80 rotate-[60deg]" />
                 <div className="flex flex-col gap-[0.75rem] md:gap-8 justify-center items-center">
@@ -15,7 +15,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                 >
                     <p className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]">Et Cetera / Prijevodi</p>
-                    <img src="/EtCetera.png" alt="EtCetera banner" className="w-full h-full object-cover block opacity-[30%]"></img>
+                    <img src="/EtCetera.png" alt="EtCetera banner" className="w-full h-full object-cover block opacity-[30%] select-none"></img>
                 </a>
             </div>
         </section>

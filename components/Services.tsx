@@ -1,7 +1,7 @@
 const Services = () => {
     return (
         <section className="section">
-            <div id="services" className="services mb-[95px] md:mb-44 relative scroll-mt-[7rem]">
+            <div id="services" className="services mb-[95px] md:mb-44 relative scroll-mt-[3rem] md:scroll-mt-[7rem]">
                 <img src="/PurpleBlob.svg" alt="Purple Blob" className="animate-breathe blob top-[-25%] left-[-60%] scale-x-70 rotate-[-15deg]" />
                 <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "2s" }} className="animate-breathe blob top-[15%] left-[40%] scale-x-70 rotate-[-15deg]" />
                 <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "3s" }} className="animate-breathe blob top-[64%] left-[-20%] scale-x-70 rotate-[-15deg]" />
@@ -20,23 +20,23 @@ const Services = () => {
                             <h3 className="font-semibold text-[1.875rem]">€350</h3>
                             <ul className="w-full flex flex-col justify-start text-base max-[350px]:text-[0.875rem] text-muted">
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
                                     <p>For getting online quickly</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
                                     <p>1-3 pages built from a refined, customizable template</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
                                     <p>Responsive design for all devices</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
                                     <p>Speed optimization</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
                                     <p>Domain and hosting guidance</p>
                                 </li>
                             </ul>

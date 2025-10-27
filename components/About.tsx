@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <section className="section">
-            <div id="about" className="about text-xl text-center pb-[217px] md:pb-[330px] scroll-mt-[7rem]">
+            <div id="about" className="about text-xl text-center pb-[217px] md:pb-[330px] scroll-mt-[3rem] md:scroll-mt-[7rem]">
                 <div className="w-full max-[410px]:text-[1rem] justify-center items-center justify-items-stretch grid grid-cols-1 grid-rows-[360px] md:grid-cols-[minmax(0,485px)_minmax(0,485px)] gap-[25px]">
                     <div className="card h-full min-h-[360px] flex flex-col gap-6 justify-center items-center py-[10px] px-[15px] sm:py-[15px] sm:px-[25px] break-words">
                         <p>

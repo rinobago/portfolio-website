@@ -13,13 +13,13 @@ const Footer = () => {
                     </div>
                     <div className="max-[390px]:col-span-1 col-span-1 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
                         <p className="text-accent">Pages</p>
-                        <a href="/#about" className="text-muted text-[0.875rem] md:text-base">
+                        <a href="/#about" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             About
                         </a>
-                        <a href="/#projects" className="text-muted text-[0.875rem] md:text-base">
+                        <a href="/#projects" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             Projects
                         </a>
-                        <a href="/#services" className="text-muted text-[0.875rem] md:text-base">
+                        <a href="/#services" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             Services
                         </a>
                     </div>
@@ -27,11 +27,11 @@ const Footer = () => {
                         <p className="text-accent">Contact</p>
                         <a href="tel:+385989466220" className="text-muted text-[0.875rem] md:text-base flex justify-center items-ce nter gap-1">
                             <img src="/Telephone.svg" alt="Telephone" className="w-5 h-5" />
-                            +385 98 9466 220
+                            <span className="hover-muted-white">+385 98 9466 220</span>
                         </a>
                         <a href="mailto:rino.bago@gmail.com" className="text-muted text-[0.875rem] md:text-base flex justify-center items-center gap-1">
                             <img src="/Mail.svg" alt="Mail" className="w-5 h-5" />
-                            rino.bago@gmail.com
+                            <span className="hover-muted-white">rino.bago@gmail.com</span>
                         </a>
                         <div className="flex justify-center items-center gap-5">
                             <a href="https://www.instagram.com/rinobago" target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,7 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <p className="font-light text-muted text-[0.875rem] md:text-base">© 2025 | Rino Bago</p>
+            <p className="font-light text-muted text-[0.875rem] md:text-base">© {new Date().getFullYear()} | Rino Bago</p>
         </div>
     );
 };

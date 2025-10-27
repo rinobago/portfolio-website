@@ -1,0 +1,83 @@
+"use client";
+import { useEffect } from "react";
+
+type MobileMenuProps = {
+    open: boolean;
+    onClose: () => void;
+};
+
+export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+    // Lock/unlock scroll
+    useEffect(() => {
+        const html = document.documentElement;
+        if (open) html.classList.add("overflow-hidden");
+        else html.classList.remove("overflow-hidden");
+        return () => html.classList.remove("overflow-hidden");
+    }, [open]);
+
+    // Close on Esc
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [onClose]);
+
+    return (
+        <div
+            className={`
+        md:hidden fixed inset-0 z-[1000]
+        ${open ? "pointer-events-auto" : "pointer-events-none"}
+      `}
+            aria-hidden={!open}
+        >
+            {/* Panel (slides from right) */}
+            <nav
+                className={`
+          absolute inset-y-0 right-0 w-screen h-screen
+          bg-bg border-l border-border
+          transition-transform duration-300 ease-out
+          ${open ? "translate-x-0" : "translate-x-full"}
+          flex flex-col
+          px-[clamp(1.25rem,6vw,2rem)]
+          gap-[15vh]
+        `}
+                role="dialog"
+                aria-modal="true"
+            >
+                {/* Header row: title + X (X is in same spot as hamburger) */}
+                <div className="flex items-center justify-between h-[5.625rem]">
+                    <p className="font-bold">
+                        Rino Bago - <span className="text-primary">Web Developer</span>
+                    </p>
+
+                    {/* X button (same position as hamburger in navbar) */}
+                    <button aria-label="Close menu" onClick={onClose} className="w-[26px] h-[26px] grid place-items-center hover:opacity-90 active:scale-95 transition cursor-pointer">
+                        <span className="text-2xl leading-none select-none">×</span>
+                    </button>
+                </div>
+
+                {/* Links */}
+                <div className="w-full flex flex-col justify-center items-center gap-[50px] text-[1.875rem] font-semibold">
+                    <a href="/#about" className="text-muted hover-muted-white" onClick={onClose}>
+                        About
+                    </a>
+                    <a href="/#projects" className="text-muted hover-muted-white" onClick={onClose}>
+                        Projects
+                    </a>
+                    <a href="/#services" className="text-muted hover-muted-white" onClick={onClose}>
+                        Services
+                    </a>
+                    <a href="/contact" className="btn-primary-outline w-fit text-[1.875rem]" onClick={onClose}>
+                        Contact
+                    </a>
+
+                    {/* Language switch (copied from desktop) */}
+                    <button className="flex gap-3 items-center cursor-pointer w-fit" onClick={onClose}>
+                        <img src="/Great Brittain.svg" alt="Great Brittain Flag" className="w-[2.5rem] aspect-[4/3]" />
+                        <img src="/Language switch arrow.svg" alt="language switch arrow" className="w-[1rem] aspect-[2.16/1]" />
+                    </button>
+                </div>
+            </nav>
+        </div>
+    );
+}

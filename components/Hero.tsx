@@ -23,7 +23,7 @@ const Hero = () => {
                             <a href="/contact" className="btn-primary whitespace-nowrap shrink-0">
                                 Get a Quote
                             </a>
-                            <a href="#" className="btn-secondary-outline whitespace-nowrap shrink-0">
+                            <a href="#projects" className="btn-secondary-outline whitespace-nowrap shrink-0">
                                 <div className="flex gap-[10px]">
                                     <span>View My Work</span>
                                     <img src="/View My Work.svg" alt="arrow" className="aspect-square max-[350px]:w-[14px]" />
