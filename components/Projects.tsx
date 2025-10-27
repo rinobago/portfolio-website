@@ -8,8 +8,8 @@ const Projects = () => {
                     <h2 className="text-[2.5rem] text-center md:text-[3.125rem] font-bold">My Past Projects</h2>
                     <p className="text-base text-center md:text-xl text-muted">See what I've built for my clients</p>
                 </div>
-                <div className="card relative w-[clamp(345px,80vw,680px)] aspect-[17/12] overflow-hidden mt-[85px] md:mt-[100px] hover:brightness-125 cursor-pointer transition duration-300">
-                    <p className="absolute z-1 font-semibold text-base md:text-[1.75rem] top-[15px] left-[20px]">Et Cetera / Prijevodi</p>
+                <div className="card relative w-[clamp(297px,80vw,680px)] aspect-[17/12] overflow-hidden mt-[85px] md:mt-[100px] hover:brightness-125 cursor-pointer transition duration-300">
+                    <p className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]">Et Cetera / Prijevodi</p>
                     <img src="/EtCetera.png" alt="EtCetera banner" className="w-full h-full object-cover block opacity-[30%]"></img>
                 </div>
             </div>

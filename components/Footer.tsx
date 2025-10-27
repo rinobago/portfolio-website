@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <div className="footer-desktop">
             <section className="section">
-                <div className="w-auto grid grid-cols-2 md:grid-cols-3 justify-center justify-items-center gap-[2.5rem] px-[clamp(1.5rem,8vw,3rem)]">
-                    <div className="col-span-2 md:col-span-1 row-start-1 w-[307px] flex justify-center items-center text-center">
+                <div className="w-auto grid max-[390px]:grid-cols-1 grid-cols-[1fr_auto] md:grid-cols-3 max-[768px]:gap-x-20 justify-center justify-items-center gap-[2.5rem] px-[clamp(0.1rem,2vw,4rem)]">
+                    <div className="max-[390px]:col-span-1 col-span-2 md:col-span-1 row-start-1 w-[307px] flex justify-center items-center text-center">
                         <a href="/#" className="w-[300px] flex flex-col items-center gap-[10px] md:gap-5 font-semibold">
                             <p className="text-[1.125rem] md:text-xl">
                                 Rino Bago - <span className="text-primary">Web Developer</span>
@@ -11,7 +11,7 @@ const Footer = () => {
                             <p className="text-[0.875rem] md:text-base text-accent">Building modern, fast, and unforgettable websites</p>
                         </a>
                     </div>
-                    <div className="col-span-1 row-start-2 md:row-auto w-[307px] flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
+                    <div className="max-[390px]:col-span-1 col-span-1 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
                         <p className="text-accent">Pages</p>
                         <a href="/#about" className="text-muted text-[0.875rem] md:text-base">
                             About
@@ -23,7 +23,7 @@ const Footer = () => {
                             Services
                         </a>
                     </div>
-                    <div className="col-span-1 row-start-2 md:row-auto w-[307px] flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
+                    <div className="max-[390px]:col-span-1 col-span-1 max-[390px]:row-start-3 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
                         <p className="text-accent">Contact</p>
                         <a href="tel:+385989466220" className="text-muted text-[0.875rem] md:text-base flex justify-center items-ce nter gap-1">
                             <img src="/Telephone.svg" alt="Telephone" className="w-5 h-5" />

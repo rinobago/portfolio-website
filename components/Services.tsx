@@ -6,7 +6,7 @@ const Services = () => {
                 <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "2s" }} className="animate-breathe blob top-[15%] left-[40%] scale-x-70 rotate-[-15deg]" />
                 <img src="/PurpleBlob.svg" alt="Purple Blob" style={{ animationDelay: "3s" }} className="animate-breathe blob top-[64%] left-[-20%] scale-x-70 rotate-[-15deg]" />
                 <img src="/GoldBlob.svg" alt="Gold Blob" className="animate-breathe blob top-[73%] left-[50%] opacity-60 scale-x-40 scale-y-80 rotate-[60deg]" />
-                <div className="flex flex-col justify-center items-center gap-[115px]">
+                <div className="w-full flex flex-col justify-center items-center gap-[115px]">
                     <div className="w-full flex flex-col justify-center items-center gap-[0.75rem] md:gap-8 text-center">
                         <h2 className="text-[2.5rem] md:text-[3.125rem] font-bold">Services</h2>
                         <p className="text-base md:text-xl text-muted w-[clamp(300px,30vw,375px)]">
@@ -14,35 +14,35 @@ const Services = () => {
                             Designed to stand out, perform fast, and grow with your business
                         </p>
                     </div>
-                    <div className="card w-full max-w-[658px] flex flex-col justify-center items-center gap-[45px] px-[25px] py-[35px]">
+                    <div className="card w-full max-w-[658px] flex flex-col justify-center items-center gap-[45px] px-[25px] max-[350px]:px-[15px] py-[35px]">
                         <div className="w-full flex flex-col justify-center items-center gap-[25px]">
                             <h3 className="font-semibold text-[1.875rem]">Quick Launch</h3>
                             <h3 className="font-semibold text-[1.875rem]">€350</h3>
-                            <ul className="w-full flex flex-col justify-start text-base text-muted">
+                            <ul className="w-full flex flex-col justify-start text-base max-[350px]:text-[0.875rem] text-muted">
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
                                     <p>For getting online quickly</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
                                     <p>1-3 pages built from a refined, customizable template</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
                                     <p>Responsive design for all devices</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
                                     <p>Speed optimization</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
-                                    <img src="/Checkmark.svg" alt="checkmark" />
+                                    <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px]" />
                                     <p>Domain and hosting guidance</p>
                                 </li>
                             </ul>
-                            <p className="text-xl text-fg w-full">Delivery: 2-3 days</p>
+                            <p className="text-xl max-[350px]:text-[1rem] text-fg w-full">Delivery: 2-3 days</p>
                         </div>
-                        <p className="text-xl text-secondary text-center w-full">Perfect if you need a clean, reliable site right now.</p>
+                        <p className="text-xl max-[350px]:text-[1rem] text-secondary text-center w-full">Perfect if you need a clean, reliable site right now.</p>
                     </div>
                     <div className="w-full flex flex-col justify-center items-center gap-[54px]">
                         <h2 className="text-[2.5rem] md:text-[3.125rem] text-center font-bold">What's Included in Your Website:</h2>
