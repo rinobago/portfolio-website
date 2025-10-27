@@ -33,7 +33,13 @@ const Hero = () => {
                     </div>
                     <div className="relative w-[326px] h-[326px] flex justify-center [@media(min-width:1140px)]:w-[100px] [@media(min-width:1140px)]:static">
                         <div className="[@media(min-width:1140px)]:right-[0%] absolute">
-                            <Image src="/MyPhoto.png" alt="Rino Bago image" width={700} height={700} className="w-[50vw] max-w-[700px] min-w-[278px] aspect-square"></Image>
+                            <Image
+                                src="/MyPhoto.png"
+                                alt="Rino Bago image"
+                                width={700}
+                                height={700}
+                                className="w-[45vw] max-[1140px]:w-[60vw] max-w-[700px] min-w-[325px] max-[370px]:w-[85vw] max-[370px]:min-w-[278px] aspect-square"
+                            ></Image>
                         </div>
                     </div>
                 </div>
