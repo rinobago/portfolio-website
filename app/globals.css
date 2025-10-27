@@ -103,7 +103,6 @@
 /* App-level CSS variables for ad-hoc arbitrary values */
 :root {
     --container: 1320px; /* use with: max-w-[var(--container)] */
-    --section-y: 120px; /* use with: pt-[var(--section-y)] pb-[var(--section-y)] */
 }
 
 /***** Base resets aligning with Figma pixel grid *****/
@@ -111,6 +110,7 @@ html,
 body,
 #__next {
     height: 100%;
+    width: 100%;
 }
 html {
     scroll-behavior: smooth;
@@ -162,8 +162,8 @@ textarea::-webkit-scrollbar-corner {
 /* ===============================
    Custom Tailwind-like utilities
    =============================== */
-@utility section-padding {
-    @apply px-[var(--spacing-section)];
+@utility section {
+    @apply w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
 }
 
 @utility maxw-container {
@@ -171,19 +171,19 @@ textarea::-webkit-scrollbar-corner {
 }
 
 @utility navbar-div-desktop {
-    @apply z-999 bg-bg/70 backdrop-blur-[15px] fixed border-b-1 border-border w-full flex justify-center;
+    @apply z-999 bg-bg/70 backdrop-blur-[15px] sticky top-0 border-b-1 border-border px-[clamp(1.25rem,4vw,var(--spacing-section))] w-full flex justify-center items-center;
 }
 
 @utility navbar-desktop {
-    @apply z-1000 flex justify-between basis-[var(--container)] py-[1.06rem] h-[5.625rem];
+    @apply z-1000 grid grid-cols-[1fr-auto-1fr] md:grid-cols-[auto_1fr_auto] items-center w-full maxw-container py-[1.06rem] h-[5.625rem];
 }
 
 @utility footer-desktop {
-    @apply w-full z-1000 bg-bg flex flex-col items-center gap-[2.5rem] py-[2.188rem] h-auto border-t-1 border-border;
+    @apply w-full z-1000 bg-bg flex flex-col items-center gap-[2.5rem] py-[20px] md:py-[35px] h-auto border-t-1 border-border;
 }
 
 @utility hero {
-    @apply w-full flex pt-40 maxw-container h-auto;
+    @apply w-full flex pt-[4.375rem] maxw-container h-auto;
 }
 
 @utility about {

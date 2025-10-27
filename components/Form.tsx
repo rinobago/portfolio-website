@@ -2,7 +2,7 @@ const Form = () => {
     return (
         <div className="formSection">
             <div className="overflow-hidden w-full">
-                <div className="flex flex-col justify-center items-center gap-[50px] pt-[140px]">
+                <div className="flex flex-col justify-center items-center gap-[50px] pt-[3.125rem]">
                     <h2 className="text-[3.125rem] font-bold text-secondary">Contact Me</h2>
                     <div className="card flex flex-col justify-center items-center p-[32px]">
                         <form method="POST" action="/api/contact">
