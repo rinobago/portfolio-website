@@ -111,7 +111,6 @@ body,
 #__next {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
 html {
     scroll-behavior: smooth;
@@ -164,7 +163,7 @@ textarea::-webkit-scrollbar-corner {
    Custom Tailwind-like utilities
    =============================== */
 @utility section {
-    @apply w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
+    @apply overflow-x-clip w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
 }
 
 @utility maxw-container {
@@ -212,7 +211,7 @@ textarea::-webkit-scrollbar-corner {
 }
 
 @utility ctaSection {
-    @apply w-full flex flex-col justify-center items-center h-auto;
+    @apply w-full flex flex-col justify-center items-center h-auto overflow-x-clip;
 }
 
 @utility formSection {
