@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
     return (
         <div className="footer-desktop">
@@ -13,15 +15,15 @@ const Footer = () => {
                     </div>
                     <div className="max-[390px]:col-span-1 col-span-1 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
                         <p className="text-accent">Pages</p>
-                        <a href="/#about" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
+                        <Link href="/#about" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             About
-                        </a>
-                        <a href="/#projects" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
+                        </Link>
+                        <Link href="/#projects" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             Projects
-                        </a>
-                        <a href="/#services" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
+                        </Link>
+                        <Link href="/#services" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
                             Services
-                        </a>
+                        </Link>
                     </div>
                     <div className="max-[390px]:col-span-1 col-span-1 max-[390px]:row-start-3 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
                         <p className="text-accent">Contact</p>

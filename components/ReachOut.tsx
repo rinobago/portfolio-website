@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ReachOut = () => {
     return (
         <section className="section">
@@ -7,9 +9,9 @@ const ReachOut = () => {
                         Ready to take your business online? <br />
                         <span className="text-primary">Let's talk.</span>
                     </p>
-                    <a href="/contact" className="btn-primary">
+                    <Link href="/contact" className="btn-primary">
                         Reach Out
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

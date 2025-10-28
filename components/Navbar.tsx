@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
@@ -15,18 +16,18 @@ const Navbar = () => {
                     </p>
                 </a>
                 <div className="hidden md:flex col-start-3 md:justify-self-end gap-[1.25rem] justify-center items-center">
-                    <a href="/#about" className="text-muted font-semibold hover-muted-white">
+                    <Link href="/#about" className="text-muted font-semibold hover-muted-white">
                         About
-                    </a>
-                    <a href="/#projects" className="text-muted font-semibold hover-muted-white">
+                    </Link>
+                    <Link href="/#projects" className="text-muted font-semibold hover-muted-white">
                         Projects
-                    </a>
-                    <a href="/#services" className="text-muted font-semibold hover-muted-white">
+                    </Link>
+                    <Link href="/#services" className="text-muted font-semibold hover-muted-white">
                         Services
-                    </a>
-                    <a href="/contact" className="btn-primary-outline">
+                    </Link>
+                    <Link href="/contact" className="btn-primary-outline">
                         Contact
-                    </a>
+                    </Link>
                     <button className="flex gap-3 justify-center items-center cursor-pointer">
                         <img src="/Great Brittain.svg" alt="Great Brittain Flag" className="w-[1.56rem] aspect-[4/3]" />
                         <img src="/Language switch arrow.svg" alt="language switch arrow" className="w-[0.81rem] aspect-[2.16/1]" />

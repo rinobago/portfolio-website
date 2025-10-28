@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useBodyScrollLock } from "./hooks/BodyLock";
 
@@ -54,18 +55,18 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
 
                 {/* Links */}
                 <div className="w-full flex flex-col justify-center items-center gap-[50px] text-[1.875rem] font-semibold">
-                    <a href="/#about" className="text-muted hover-muted-white" onClick={onClose}>
+                    <Link href="/#about" className="text-muted hover-muted-white" onClick={onClose}>
                         About
-                    </a>
-                    <a href="/#projects" className="text-muted hover-muted-white" onClick={onClose}>
+                    </Link>
+                    <Link href="/#projects" className="text-muted hover-muted-white" onClick={onClose}>
                         Projects
-                    </a>
-                    <a href="/#services" className="text-muted hover-muted-white" onClick={onClose}>
+                    </Link>
+                    <Link href="/#services" className="text-muted hover-muted-white" onClick={onClose}>
                         Services
-                    </a>
-                    <a href="/contact" className="btn-primary-outline w-fit text-[1.875rem]" onClick={onClose}>
+                    </Link>
+                    <Link href="/contact" className="btn-primary-outline w-fit text-[1.875rem]" onClick={onClose}>
                         Contact
-                    </a>
+                    </Link>
 
                     {/* Language switch (copied from desktop) */}
                     <button className="flex gap-3 items-center cursor-pointer w-fit" onClick={onClose}>

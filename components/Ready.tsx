@@ -2,7 +2,11 @@ const Ready = () => {
     return (
         <section className="section">
             <div className="ready mb-[5.625rem] md:mb-44 relative">
-                <img src="/PurpleBlob.svg" alt="Purple Blob" className="animate-breathe blob top-[-30%] left-[70%] scale-x-70 rotate-[32deg]" />
+                <img
+                    src="/PurpleBlob.svg"
+                    alt="Purple Blob"
+                    className="animate-breathe blob top-[-30%] left-[70%] scale-x-70 rotate-[32deg] max-[1535px]:top-[-30%] max-[1535px]:left-[60%] max-[960px]:top-[10%] max-[960px]:left-[55%] max-[768px]:top-[-25%] max-[768px]:left-[50%] max-[630px]:top-[10%] max-[630px]:left-[50%] max-[630px]:scale-y-150 max-[630px]:scale-x-100 max-[430px]:top-[20%] max-[430px]:left-[60%] max-[430px]:scale-y-160 max-[430px]:scale-x-110"
+                />
                 <div className="flex flex-col justify-center items-center gap-[5.625rem] md:gap-44">
                     <p className="text-[1.75rem] md:text-[2.5rem] text-center w-full">
                         If you're ready to elevate your <span className="font-bold text-gold">online</span> presence, let's create something{" "}
