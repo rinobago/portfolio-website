@@ -156,7 +156,7 @@ textarea::-webkit-scrollbar-corner {
 }
 
 @utility animate-breathe {
-    animation: breathe 0s ease-in-out infinite;
+    animation: breathe 8s ease-in-out infinite;
 }
 
 @utility hover-muted-white {
