@@ -167,7 +167,7 @@ textarea::-webkit-scrollbar-corner {
    Custom Tailwind-like utilities
    =============================== */
 @utility section {
-    @apply overflow-x-clip w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
+    @apply w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
 }
 
 @utility maxw-container {
