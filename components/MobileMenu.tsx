@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useBodyScrollLock } from "./hooks/BodyLock";
+import LanguageButton from "./LanguageButton";
 
 type MobileMenuProps = {
     open: boolean;
@@ -69,10 +70,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                     </Link>
 
                     {/* Language switch (copied from desktop) */}
-                    <button className="flex gap-3 items-center cursor-pointer w-fit" onClick={onClose}>
-                        <img src="/Great Brittain.svg" alt="Great Brittain Flag" className="w-[2.5rem] aspect-[4/3]" />
-                        <img src="/Language switch arrow.svg" alt="language switch arrow" className="w-[1rem] aspect-[2.16/1]" />
-                    </button>
+                    <LanguageButton variant="mobile" onClick={onClose} menuOpen={open} />
                 </div>
             </nav>
         </div>

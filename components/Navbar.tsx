@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import LanguageButton from "./LanguageButton";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
@@ -28,10 +29,7 @@ const Navbar = () => {
                     <Link href="/contact" className="btn-primary-outline">
                         Contact
                     </Link>
-                    <button className="flex gap-3 justify-center items-center cursor-pointer">
-                        <img src="/Great Brittain.svg" alt="Great Brittain Flag" className="w-[1.56rem] aspect-[4/3]" />
-                        <img src="/Language switch arrow.svg" alt="language switch arrow" className="w-[0.81rem] aspect-[2.16/1]" />
-                    </button>
+                    <LanguageButton variant="desktop" />
                 </div>
                 <div className="col-start-3 justify-self-end md:hidden">
                     <button aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen((v) => !v)} className="w-[26px] h-[26px] grid place-items-center cursor-pointer">
