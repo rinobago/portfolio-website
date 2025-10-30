@@ -40,9 +40,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           ${open ? "translate-x-0" : "translate-x-full"}
           flex flex-col
           px-[clamp(1.25rem,6vw,2rem)]
-          pt-[max(env(safe-area-inset-top),1rem)]
-          pb-[max(env(safe-area-inset-bottom),1rem)]
-          gap-[15vh]
+          gap-[10vh]
         `}
                 role="dialog"
                 aria-modal="true"
@@ -60,7 +58,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                 </div>
 
                 {/* Links */}
-                <div className="w-full flex flex-col justify-center items-center gap-[50px] text-[1.875rem] font-semibold">
+                <div className="w-full flex flex-col justify-center items-center gap-[40px] text-[1.875rem] font-semibold">
                     <Link href="/#about" className="text-muted hover-muted-white" onClick={onClose}>
                         {t("about")}
                     </Link>
