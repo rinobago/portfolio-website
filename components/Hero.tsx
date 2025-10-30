@@ -7,7 +7,7 @@ const Hero = () => {
     const locale = useLocale();
 
     const titleSize = locale === "hr" ? "text-[clamp(2.35rem,4vw,3.5rem)]" : "text-[clamp(3.1rem,5.2vw,4.375rem)]";
-    const titleLeading = locale === "hr" ? "leading-[clamp(55px,5vw,71px)]" : "leading-[clamp(55px,6.5vw,88px)]";
+    const titleLeading = locale === "hr" ? "leading-[clamp(40px,5vw,71px)]" : "leading-[clamp(55px,6.5vw,88px)]";
 
     return (
         <section className="section">
