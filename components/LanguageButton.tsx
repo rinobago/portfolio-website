@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 type Variant = "desktop" | "mobile";
@@ -21,6 +23,10 @@ const LanguageButton = ({ variant = "mobile", onClick, menuOpen }: LanguageButto
     const [open, setOpen] = useState(false);
     const [lang, setLang] = useState<Lang>("hr");
 
+    const locale = useLocale();
+    const router = useRouter();
+    const pathname = usePathname();
+
     useEffect(() => {
         if (!menuOpen) setOpen(false);
     }, [menuOpen]);
@@ -32,8 +38,17 @@ const LanguageButton = ({ variant = "mobile", onClick, menuOpen }: LanguageButto
         en: { src: "/Great Brittain.svg", alt: "Great Britain Flag" },
     };
 
-    const current = FLAGS[lang];
-    const other = lang === "hr" ? FLAGS.en : FLAGS.hr;
+    const current = FLAGS[locale as "en" | "hr"];
+    const nextLocale = (locale === "hr" ? "en" : "hr") as "en" | "hr";
+    const other = FLAGS[nextLocale];
+
+    const switchLocale = () => {
+        // Update URL + re-render with new locale
+        // Use `push` if you want back-button to return to previous locale.
+        router.replace(pathname, { locale: nextLocale } as any);
+        setOpen(false);
+        onClick?.();
+    };
 
     return (
         <div className="relative inline-block">
@@ -50,11 +65,7 @@ const LanguageButton = ({ variant = "mobile", onClick, menuOpen }: LanguageButto
 
             {/* Dropdown panel */}
             <div
-                onClick={() => {
-                    setLang((prev) => (prev === "hr" ? "en" : "hr"));
-                    setOpen(false);
-                    onClick?.();
-                }}
+                onClick={switchLocale}
                 style={{ width: `${btnWidth}px`, padding: `${panelPadPx}px` }}
                 className={`
                             absolute left-[-25%] top-[calc(100%+5px)]

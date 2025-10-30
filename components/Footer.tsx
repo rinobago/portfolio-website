@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const Footer = () => {
+    const t = useTranslations("Footer");
+
     return (
         <div className="footer-desktop">
             <section className="section">
@@ -10,23 +13,23 @@ const Footer = () => {
                             <p className="text-[1.125rem] md:text-xl">
                                 Rino Bago - <span className="text-primary">Web Developer</span>
                             </p>
-                            <p className="text-[0.875rem] md:text-base text-accent">Building modern, fast, and unforgettable websites</p>
+                            <p className="text-[0.875rem] md:text-base text-accent">{t("description")}</p>
                         </a>
                     </div>
                     <div className="max-[390px]:col-span-1 col-span-1 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
-                        <p className="text-accent">Pages</p>
+                        <p className="text-accent">{t("pages.title")}</p>
                         <Link href="/#about" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
-                            About
+                            {t("pages.about")}
                         </Link>
                         <Link href="/#projects" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
-                            Projects
+                            {t("pages.projects")}
                         </Link>
                         <Link href="/#services" className="text-muted text-[0.875rem] md:text-base hover-muted-white">
-                            Services
+                            {t("pages.services")}
                         </Link>
                     </div>
                     <div className="max-[390px]:col-span-1 col-span-1 max-[390px]:row-start-3 row-start-2 md:row-auto flex flex-col items-center gap-[8px] md:gap-5 font-semibold">
-                        <p className="text-accent">Contact</p>
+                        <p className="text-accent">{t("contact")}</p>
                         <a href="tel:+385989466220" className="text-muted text-[0.875rem] md:text-base flex justify-center items-ce nter gap-1">
                             <img src="/Telephone.svg" alt="Telephone" className="w-5 h-5" />
                             <span className="hover-muted-white">+385 98 9466 220</span>

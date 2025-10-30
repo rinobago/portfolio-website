@@ -1,15 +1,19 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const CtaSection = () => {
+    const t = useTranslations("CtaSection");
+
     return (
         <div className="ctaSection">
             <div className="w-full flex flex-col justify-center items-center text-center overflow-hidden">
                 <div className="h-[213px] md:h-[330px] w-full"></div>
                 <p className="text-[clamp(1.875rem,6.5vw,3.125rem)] mb-[20px] md:mb-[75px] px-[20px]">
-                    Interested in working with <span className="font-bold text-secondary">me</span>?
+                    {t("text.fg")}
+                    <span className="font-bold text-secondary">{t("text.colored")}</span>?
                 </p>
                 <Link href="/contact" className="btn-primary text-xl md:text-[1.563rem] px-[30px] py-[25px]">
-                    Let's make it happen!
+                    {t("button")}
                 </Link>
                 <div className="relative h-[213px] md:h-[330px] w-full">
                     <img

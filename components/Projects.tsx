@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Projects = () => {
+    const t = useTranslations("Projects");
+
     return (
         <section className="section">
             <div id="projects" className="projects mb-[213px] md:mb-[330px] relative scroll-mt-[3rem] md:scroll-mt-[7rem]">
@@ -16,8 +19,8 @@ const Projects = () => {
                     className="animate-breathe blob top-[5%] left-[25%] scale-x-50 scale-y-80 rotate-[60deg] max-[1140px]:top-[10%] max-[1140px]:left-[25%] max-[1000px]:top-[30%] max-[1000px]:left-[35%] max-[823px]:top-[50%] max-[823px]:left-[40%] max-[823px]:scale-y-110 max-[823px]:scale-x-90 max-[600px]:top-[50%] max-[600px]:left-[40%] max-[600px]:scale-y-150 max-[600px]:scale-x-120 max-[430px]:top-[50%] max-[430px]:left-[30%] max-[430px]:scale-x-90 max-[390px]:top-[60%] max-[390px]:left-[40%]"
                 />
                 <div className="flex flex-col gap-[0.75rem] md:gap-8 justify-center items-center">
-                    <h2 className="text-[2.5rem] text-center md:text-[3.125rem] font-bold">My Past Projects</h2>
-                    <p className="text-base text-center md:text-xl text-muted">See what I've built for my clients</p>
+                    <h2 className="text-[2.5rem] text-center md:text-[3.125rem] font-bold">{t("title")}</h2>
+                    <p className="text-base text-center md:text-xl text-muted">{t("description")}</p>
                 </div>
                 <a
                     href="https://www.etc.com.hr/"
@@ -25,7 +28,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <p className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]">Et Cetera / Prijevodi</p>
+                    <p className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]">{t("projectName")}</p>
                     <Image src="/EtCetera.png" alt="EtCetera banner" fill className="w-full h-full object-cover block opacity-[30%] select-none"></Image>
                 </a>
             </div>

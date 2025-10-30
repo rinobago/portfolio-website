@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 const Services = () => {
+    const t = useTranslations("Services");
+
     return (
         <section className="section">
             <div id="services" className="services mb-[95px] md:mb-44 relative scroll-mt-[3rem] md:scroll-mt-[7rem]">
@@ -26,79 +30,78 @@ const Services = () => {
                 />
                 <div className="w-full flex flex-col justify-center items-center gap-[115px]">
                     <div className="w-full flex flex-col justify-center items-center gap-[0.75rem] md:gap-8 text-center">
-                        <h2 className="text-[2.5rem] md:text-[3.125rem] font-bold">Services</h2>
+                        <h2 className="text-[2.5rem] md:text-[3.125rem] font-bold">{t("title")}</h2>
                         <p className="text-base md:text-xl text-muted w-[clamp(300px,30vw,375px)]">
-                            Built around your goals. <br />
-                            Designed to stand out, perform fast, and grow with your business
+                            {t("description.row1")}
+                            {t("description.row2")}
                         </p>
                     </div>
                     <div className="card w-full max-w-[658px] flex flex-col justify-center items-center gap-[45px] px-[25px] max-[350px]:px-[15px] py-[35px]">
                         <div className="w-full flex flex-col justify-center items-center gap-[25px]">
-                            <h3 className="font-semibold text-[1.875rem]">Quick Launch</h3>
-                            <h3 className="font-semibold text-[1.875rem]">€350</h3>
+                            <h3 className="font-semibold text-[1.875rem]">{t("card.title")}</h3>
+                            <h3 className="font-semibold text-[1.875rem]">{t("card.price")}</h3>
                             <ul className="w-full flex flex-col justify-start text-base max-[350px]:text-[0.875rem] text-muted">
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
                                     <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
-                                    <p>For getting online quickly</p>
+                                    <p>{t("card.included.row1")}</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
                                     <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
-                                    <p>1-3 pages built from a refined, customizable template</p>
+                                    <p>{t("card.included.row2")}</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
                                     <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
-                                    <p>Responsive design for all devices</p>
+                                    <p>{t("card.included.row3")}</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
                                     <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
-                                    <p>Speed optimization</p>
+                                    <p>{t("card.included.row4")}</p>
                                 </li>
                                 <li className="flex gap-[10px] py-[15px] border-b-1 border-muted">
                                     <img src="/Checkmark.svg" alt="checkmark" className="max-[350px]:aspect-square max-[350px]:w-[16px] select-none" />
-                                    <p>Domain and hosting guidance</p>
+                                    <p>{t("card.included.row5")}</p>
                                 </li>
                             </ul>
-                            <p className="text-xl max-[350px]:text-[1rem] text-fg w-full">Delivery: 2-3 days</p>
+                            <p className="text-xl max-[350px]:text-[1rem] text-fg w-full">{t("card.delivery")}</p>
                         </div>
-                        <p className="text-xl max-[350px]:text-[1rem] text-secondary text-center w-full">Perfect if you need a clean, reliable site right now.</p>
+                        <p className="text-xl max-[350px]:text-[1rem] text-secondary text-center w-full">{t("card.description")}</p>
                     </div>
                     <div className="w-full flex flex-col justify-center items-center gap-[54px]">
-                        <h2 className="text-[2.5rem] md:text-[3.125rem] text-center font-bold">What's Included in Your Website:</h2>
+                        <h2 className="text-[2.5rem] md:text-[3.125rem] text-center font-bold">{t("included.title")}</h2>
                         <ul className="w-full max-w-[845px] flex flex-col justify-start gap-[15px] text-[0.875rem] md:text-xl text-fg">
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
-                                    <span className="font-bold text-primary">RESPONSIVE DESIGN</span> - Your website will look and function perfectly on any device - from large desktop screens to
-                                    tablets and smartphones. I carefully design and test each page to ensure it's fully responsive, so your visitors always get the same smooth experience no matter how
-                                    they browse.
+                                    <span className="font-bold text-primary">{t("included.services.row1.title")}</span>
+                                    {t("included.services.row1.description")}
                                 </p>
                             </li>
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
-                                    <span className="font-bold text-primary">FAST LOADING SPEEDS</span> - Speed is everything! A slow website loses visitors before they even see your content. That's
-                                    why I focus on optimized performance and efficient hosting setups to make sure your site loads instantly and runs reliably.
+                                    <span className="font-bold text-primary">{t("included.services.row2.title")}</span>
+                                    {t("included.services.row2.description")}
                                 </p>
                             </li>
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
-                                    <span className="font-bold text-primary">MODERN, CLEAN DESIGN</span> - Every design choice is tailored to your brand and audience. Clean layouts, balanced spacing,
-                                    and visuals that feel both professional and modern.
+                                    <span className="font-bold text-primary">{t("included.services.row3.title")}</span>
+                                    {t("included.services.row3.description")}
                                 </p>
                             </li>
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
-                                    <span className="font-bold text-primary">DOMAIN AND HOSTING GUIDANCE</span> - I'll help you set up your domain and hosting the right way - secure, reliable, and
-                                    fast. Whether you already have a provider or need help choosing one, I'll walk you through the process so your website is live and running without any confusion.
+                                    <span className="font-bold text-primary">{t("included.services.row4.title")}</span>
+                                    {t("included.services.row4.description")}
                                 </p>
                             </li>
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
-                                    <span className="font-bold text-primary">SEO SETUP</span> - Your website will be built with search engines in mind from day one. I'll optimize your structure,
-                                    metadata, and keyword placement to help you appear on Google and reach more potential customers.
+                                    <span className="font-bold text-primary">{t("included.services.row5.title")}</span>
+                                    {t("included.services.row5.description")}
                                 </p>
                             </li>
                         </ul>

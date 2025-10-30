@@ -1,7 +1,14 @@
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
+    const t = useTranslations("Hero");
+    const locale = useLocale();
+
+    const titleSize = locale === "hr" ? "text-[clamp(2.35rem,4vw,3.5rem)]" : "text-[clamp(3.1rem,5.2vw,4.375rem)]";
+    const titleLeading = locale === "hr" ? "leading-[clamp(55px,5vw,71px)]" : "leading-[clamp(55px,6.5vw,88px)]";
+
     return (
         <section className="section">
             <div className="hero relative mb-[clamp(112px,41.2vw,640px)]">
@@ -24,23 +31,28 @@ const Hero = () => {
                 />
                 <div className="w-full h-full relative flex flex-col justify-center items-center [@media(min-width:1140px)]:flex-row [@media(min-width:1140px)]:gap-[clamp(200px,27vw,500px)] gap-[2.5rem]">
                     <div className="w-full [@media(min-width:1140px)]:w-[44.188rem] flex flex-col items-center [@media(min-width:1140px)]:items-baseline gap-4">
-                        <h1 className="font-semibold text-center [@media(min-width:1140px)]:text-left text-[clamp(3.1rem,5.2vw,4.375rem)] leading-[clamp(55px,6.5vw,88px)] w-full [@media(min-width:1140px)]:w-[44.188rem]">
-                            Modern Websites, Built <span className="text-primary">Right</span>
+                        <h1 className={`font-semibold text-center [@media(min-width:1140px)]:text-left ${titleSize} ${titleLeading} w-full [@media(min-width:1140px)]:w-[44.188rem]`}>
+                            {t("title.fg")}
+                            <span className="text-primary">{t("title.colored")}</span>
                         </h1>
                         <p className="w-full text-center text-base [@media(min-width:1140px)]:text-left [@media(min-width:1140px)]:text-xl max-w-[23.438rem]">
-                            Hi, I'm <span className="text-secondary">Rino</span>! Let's build something{" "}
+                            {t("description.greeting")}
+                            <span className="text-secondary">Rino</span>
+                            {t("description.build")}
                             <span className="font-bold">
-                                <span className="text-secondary">modern</span>, fast and <span className="text-gold">unforgettable</span>
+                                <span className="text-secondary">{t("description.modern")}</span>
+                                {t("description.fast")}
+                                <span className="text-gold">{t("description.unforgettable")}</span>
                             </span>
                             .
                         </p>
                         <div className="mt-[4.5rem] flex max-[350px]:flex-col gap-4 justify-center items-center">
                             <Link href="/contact" className="btn-primary whitespace-nowrap shrink-0">
-                                Get a Quote
+                                {t("quote")}
                             </Link>
                             <a href="#projects" className="btn-secondary-outline whitespace-nowrap shrink-0">
                                 <div className="flex gap-[10px]">
-                                    <span>View My Work</span>
+                                    <span>{t("work")}</span>
                                     <img src="/View My Work.svg" alt="arrow" className="aspect-square max-[350px]:w-[14px]" />
                                 </div>
                             </a>

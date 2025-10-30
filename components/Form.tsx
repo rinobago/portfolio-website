@@ -1,9 +1,13 @@
+import { useTranslations } from "next-intl";
+
 const Form = () => {
+    const t = useTranslations("Form");
+
     return (
         <section className="formSection">
             <div className="overflow-hidden w-full">
                 <div className="w-full flex flex-col justify-center items-center gap-[50px] pt-[3.125rem]">
-                    <h2 className="text-[3.125rem] text-center font-bold text-secondary">Contact Me</h2>
+                    <h2 className="text-[3.125rem] text-center font-bold text-secondary">{t("title")}</h2>
                     <div className="w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))]">
                         <div className="card w-full max-w-[720px] flex flex-col justify-center items-center p-[32px]">
                             <form method="POST" action="/api/contact" className="w-full">
@@ -11,7 +15,7 @@ const Form = () => {
                                     {/* Name */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px]">
                                         <label htmlFor="name" className="text-base max-[350px]:text-sm">
-                                            Name
+                                            {t("card.row1.label1")}
                                         </label>
                                         <input
                                             id="name"
@@ -25,7 +29,7 @@ const Form = () => {
                                     {/* Email */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px]">
                                         <label htmlFor="email" className="text-base max-[350px]:text-sm">
-                                            Email
+                                            {t("card.row1.label2")}
                                         </label>
                                         <input
                                             id="email"
@@ -39,7 +43,7 @@ const Form = () => {
                                     {/* Company */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px]">
                                         <label htmlFor="company" className="text-base max-[350px]:text-sm">
-                                            Company name (optional)
+                                            {t("card.row2.label1")}
                                         </label>
                                         <input
                                             id="company"
@@ -52,7 +56,7 @@ const Form = () => {
                                     {/* Phone */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px]">
                                         <label htmlFor="phone" className="text-base max-[350px]:text-sm">
-                                            Phone number
+                                            {t("card.row2.label2")}
                                         </label>
                                         <input
                                             id="phone"
@@ -65,14 +69,14 @@ const Form = () => {
                                     {/* Details (span 2 cols on md+) */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px] sm:col-span-2">
                                         <label htmlFor="message" className="text-base max-[350px]:text-sm">
-                                            Details
+                                            {t("card.row3.label")}
                                         </label>
                                         <textarea
                                             id="message"
                                             name="message"
                                             rows={6}
                                             required
-                                            placeholder="Enter the website details"
+                                            placeholder={t("card.row3.placeholder")}
                                             className="placeholder:max-[350px]:text-[0.8rem] resize-y w-full h-[160px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0 scrollbar"
                                         />
                                     </div>
@@ -83,7 +87,7 @@ const Form = () => {
                                     {/* Submit (span 2 cols on md+) */}
                                     <div className="w-full flex flex-col justify-center items-center pt-[8px] sm:col-span-2">
                                         <button type="submit" className="btn-primary text-[1.563rem] px-[30px] py-[18px]">
-                                            Send
+                                            {t("card.button")}
                                         </button>
                                     </div>
                                 </div>

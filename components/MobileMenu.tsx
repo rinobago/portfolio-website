@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useBodyScrollLock } from "./hooks/BodyLock";
@@ -10,6 +11,8 @@ type MobileMenuProps = {
 };
 
 export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+    const t = useTranslations("Navbar");
+
     // Lock/unlock scroll
     useBodyScrollLock(open);
 
@@ -57,16 +60,16 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                 {/* Links */}
                 <div className="w-full flex flex-col justify-center items-center gap-[50px] text-[1.875rem] font-semibold">
                     <Link href="/#about" className="text-muted hover-muted-white" onClick={onClose}>
-                        About
+                        {t("about")}
                     </Link>
                     <Link href="/#projects" className="text-muted hover-muted-white" onClick={onClose}>
-                        Projects
+                        {t("projects")}
                     </Link>
                     <Link href="/#services" className="text-muted hover-muted-white" onClick={onClose}>
-                        Services
+                        {t("services")}
                     </Link>
                     <Link href="/contact" className="btn-primary-outline w-fit text-[1.875rem]" onClick={onClose}>
-                        Contact
+                        {t("contact")}
                     </Link>
 
                     {/* Language switch (copied from desktop) */}

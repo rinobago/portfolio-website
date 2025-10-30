@@ -1,0 +1,181 @@
+{
+    "Navbar": {
+        "about": "O meni",
+        "projects": "Projekti",
+        "services": "Usluge",
+        "contact": "Kontakt"
+    },
+    "Hero": {
+        "title": {
+            "fg": "Moderne web-stranice, po ",
+            "colored": "tvojoj mjeri"
+        },
+        "description": {
+            "greeting": "Bok, ja sam ",
+            "build": "! Izradimo nešto ",
+            "modern": "moderno",
+            "fast": ", brzo i ",
+            "unforgettable": "nezaboravno"
+        },
+        "quote": "Zatraži ponudu",
+        "work": "Pogledaj moj rad"
+    },
+    "About": {
+        "card1": {
+            "p1": {
+                "fg": "Ja sam Rino Bago, web developer koji izrađuje web-stranice koje ostavljaju ",
+                "impress": "dojam",
+                "and": " i daju ",
+                "perform": "rezultate"
+            },
+            "p2": {
+                "fg1": "Tvoja web stranica je ",
+                "face": "lice",
+                "fg2": " tvog brenda - prvi dojam koji ostavljaš na klijente."
+            },
+            "p3": {
+                "fg1": "Taj prvi trenutak pretvaram u rezultat kroz ",
+                "bold": "elegantne, brze i profesionalne",
+                "fg2": " web-stranice koje privlače i donose ",
+                "clients": "klijente"
+            }
+        },
+        "card2": {
+            "p1": {
+                "fg": "Svaka stranica koju izradim prilagođena je tvom ",
+                "brand": "brendu",
+                "goals": " i ciljevima - ",
+                "bold": "brza, moderna i jednostavna za korištenje."
+            },
+            "p2": {
+                "clutter": "Bez nepotrebnih elemenata",
+                "fg": ". Samo čist, profesionalan dizajn koji ",
+                "gold": "izdvaja",
+                "your": " tvoj brend od drugih."
+            }
+        }
+    },
+    "Projects": {
+        "title": "Moji projekti",
+        "description": "Pogledaj što sam izgradio za svoje klijente",
+        "projectName": "Et Cetera / Prijevodi"
+    },
+    "Ready": {
+        "fg1": "Ako želiš podići svoje ",
+        "gold": "online",
+        "fg2": " prisustvo na višu razinu, stvorimo zajedno nešto ",
+        "purple": "nezaboravno"
+    },
+    "Services": {
+        "title": "Usluge",
+        "description": {
+            "row1": "Osmišljeno i kreirano prema tvojim ciljevima. ",
+            "row2": "Dizajnirano da se istakne, oduševi brzinom i raste zajedno s tvojim poslovanjem"
+        },
+        "card": {
+            "title": "Brzo pokretanje",
+            "price": "€350",
+            "included": {
+                "row1": "Za brzu izradu web-stranice i online prisutnosti",
+                "row2": "1-3 stranice izrađene prema modernom i prilagodljivom predlošku",
+                "row3": "Responzivan dizajn za sve uređaje",
+                "row4": "Optimizirano za brzinu",
+                "row5": "Pomoć pri postavljanju domene i hostinga"
+            },
+            "delivery": "Vrijeme isporuke: 2-3 dana",
+            "description": "Savršeno ako želiš atraktivnu i pouzdanu web-stranicu bez čekanja."
+        },
+        "included": {
+            "title": "Što sve dobivaš sa svojom web-stranicom:",
+            "services": {
+                "row1": {
+                    "title": "RESPONZIVAN DIZAJN",
+                    "description": " - Tvoja će web stranica izgledati i raditi savršeno na svakom uređaju - od velikih zaslona do tableta i pametnih telefona. Svaku stranicu pažljivo dizajniram i testiram kako bi bila u potpunosti prilagodljiva, pružajući tvojim posjetiteljima besprijekorno i ugodno iskustvo bez obzira na veličinu zaslona."
+                },
+                "row2": {
+                    "title": "BRZO UČITAVANJE",
+                    "description": " - Brzina je sve! Spora web-stranica gubi posjetitelje prije nego što pogledaju tvoj sadržaj. Zato se fokusiram na optimizirane performanse i učinkovite hosting sustave kako bi se tvoja stranica učitavala trenutno i radila besprijekorno."
+                },
+                "row3": {
+                    "title": "MODERAN, ČIST DIZAJN",
+                    "description": " - Odluka o dizajnu prilagođena je tvom brendu i publici. Čisti rasporedi, uravnotežen razmak i vizualni stil daju web-stranicu koja izgleda profesionalno i moderno."
+                },
+                "row4": {
+                    "title": "POMOĆ PRI POSTAVLJANJU DOMENE I HOSTINGU",
+                    "description": " - Pomoći ću ti postaviti domenu i hosting na pravi način - sigurno, pouzdano i brzo. Bez obzira imaš li već pružatelja usluge ili ga tek tražiš, vodit ću te kroz cijeli proces kako bi tvoja web-stranica bila spremna za rad bez komplikacija."
+                },
+                "row5": {
+                    "title": "POSTAVLJANJE SEO SUSTAVA",
+                    "description": " - Tvoja će web-stranica od samog početka biti optimizirana za tražilice. Postavit ću strukturu, meta-opise i ključne riječi kako bi se lakše prikazivala na Googleu i privukla više potencijalnih klijenata."
+                }
+            }
+        }
+    },
+    "ReachOut": {
+        "text": {
+            "row1": "Spremni za podizanje poslovanja online? ",
+            "row2": "Javi mi se."
+        },
+        "button": "Kontaktiraj me"
+    },
+    "AdditionalServices": {
+        "title": "Dodatne usluge",
+        "card": {
+            "row1": {
+                "title": "Održavanje web stranice",
+                "description": "Održavam tvoju stranicu brzom, sigurnom i ažuriranom uz mjesečne provjere performansi, nadogradnje sadržaja i tehničku podršku."
+            },
+            "row2": {
+                "title": "SEO optimizacija",
+                "description": "Mjesečno poboljšaj vidljivost i poziciju na Googleu pomoću postavljanja ključnih riječi, optimizacije meta opisa i poboljšanje brzine stranice."
+            },
+            "row3": {
+                "title": "AI Chatbot integracija",
+                "description": "Dodajem prilagođen AI chatbot koji dočekuje posjetitelje, odgovara na pitanja i prikuplja potencijalne klijente - savršeno za poduzeća, ordinacije ili uslužne djelatnosti."
+            },
+            "row4": {
+                "title": "Analitika i praćenje",
+                "description": "Postavljam Google Analytics, praćenje posjetitelja i izvještaje o izvedbi, tako da točno znaš kako se korisnici ponašaju na tvojoj stranici i što najviše privlači njihovu pažnju."
+            },
+            "row5": {
+                "title": "Animacije i interakcije",
+                "description": "Uklopit ću suptilne animacije, prijelaze i efekte kako bi tvoja web stranica djelovala življe, modernije i profesionalnije te povećala angažman korisnika."
+            }
+        }
+    },
+    "CtaSection": {
+        "text": {
+            "fg": "Zanima te suradnja ",
+            "colored": "sa mnom"
+        },
+        "button": "Pretvorimo tvoju ideju u stvarnost!"
+    },
+    "Footer": {
+        "description": "Izrađujem moderne, brze i nezaboravne web-stranice",
+        "pages": {
+            "title": "Stranice",
+            "about": "O meni",
+            "projects": "Projekti",
+            "services": "Usluge"
+        },
+        "contact": "Kontakt"
+    },
+    "Form": {
+        "title": "Kontaktiraj me",
+        "card": {
+            "row1": {
+                "label1": "Ime i prezime",
+                "label2": "Email"
+            },
+            "row2": {
+                "label1": "Ime trvtke (nije obavezno)",
+                "label2": "Broj mobitela"
+            },
+            "row3": {
+                "label": "Detalji",
+                "placeholder": "Unesite detalje web-stranice"
+            },
+            "button": "Pošalji"
+        }
+    }
+}

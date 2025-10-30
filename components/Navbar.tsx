@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import LanguageButton from "./LanguageButton";
@@ -6,6 +7,8 @@ import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const t = useTranslations("Navbar");
 
     return (
         <div className="navbar-div-desktop">
@@ -18,16 +21,16 @@ const Navbar = () => {
                 </a>
                 <div className="hidden md:flex col-start-3 md:justify-self-end gap-[1.25rem] justify-center items-center">
                     <Link href="/#about" className="text-muted font-semibold hover-muted-white">
-                        About
+                        {t("about")}
                     </Link>
                     <Link href="/#projects" className="text-muted font-semibold hover-muted-white">
-                        Projects
+                        {t("projects")}
                     </Link>
                     <Link href="/#services" className="text-muted font-semibold hover-muted-white">
-                        Services
+                        {t("services")}
                     </Link>
                     <Link href="/contact" className="btn-primary-outline">
-                        Contact
+                        {t("contact")}
                     </Link>
                     <LanguageButton variant="desktop" />
                 </div>

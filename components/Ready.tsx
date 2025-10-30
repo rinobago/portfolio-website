@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 const Ready = () => {
+    const t = useTranslations("Ready");
+
     return (
         <section className="section">
             <div className="ready mb-[5.625rem] md:mb-44 relative">
@@ -9,8 +13,10 @@ const Ready = () => {
                 />
                 <div className="flex flex-col justify-center items-center gap-[5.625rem] md:gap-44">
                     <p className="text-[1.75rem] md:text-[2.5rem] text-center w-full">
-                        If you're ready to elevate your <span className="font-bold text-gold">online</span> presence, let's create something{" "}
-                        <span className="font-bold text-primary">unforgettable</span>.
+                        {t("fg1")}
+                        <span className="font-bold text-gold">{t("gold")}</span>
+                        {t("fg2")}
+                        <span className="font-bold text-primary">{t("purple")}</span>.
                     </p>
                     <div className="flex flex-col justify-center items-center gap-[0.625rem] md:gap-4">
                         <img src="/AvatarPurpleCircle.svg" alt="Purple circle" className="w-[2.188rem] h-[2.188rem] md:w-[4.063rem] md:h-[4.063rem] select-none" />
