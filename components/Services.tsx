@@ -1,7 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Services = () => {
     const t = useTranslations("Services");
+    const locale = useLocale();
+
+    const titleLeading = locale === "hr" ? "leading-[45px]" : "leading-[50px]";
 
     return (
         <section className="section">
@@ -67,7 +70,7 @@ const Services = () => {
                         <p className="text-xl max-[350px]:text-[1rem] text-secondary text-center w-full">{t("card.description")}</p>
                     </div>
                     <div className="w-full flex flex-col justify-center items-center gap-[54px]">
-                        <h2 className="text-[2.5rem] md:text-[3.125rem] text-center font-bold">{t("included.title")}</h2>
+                        <h2 className={`text-[2.5rem] md:text-[3.125rem] ${titleLeading} text-center font-bold`}>{t("included.title")}</h2>
                         <ul className="w-full max-w-[845px] flex flex-col justify-start gap-[15px] text-[0.875rem] md:text-xl text-fg">
                             <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
                                 <img src="/Checkmark.svg" alt="checkmark" />

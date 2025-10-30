@@ -12,7 +12,7 @@ const CtaSection = () => {
                     {t("text.fg")}
                     <span className="font-bold text-secondary">{t("text.colored")}</span>?
                 </p>
-                <Link href="/contact" className="btn-primary text-xl md:text-[1.563rem] px-[30px] py-[25px]">
+                <Link href="/contact" className="max-w-[275px] md:max-w-[510px] btn-primary text-xl md:text-[1.563rem] px-[30px] py-[25px]">
                     {t("button")}
                 </Link>
                 <div className="relative h-[213px] md:h-[330px] w-full">
