@@ -139,7 +139,7 @@
             },
             "row5": {
                 "title": "Animacije i interakcije",
-                "description": "Uklopit ću suptilne animacije, prijelaze i efekte kako bi tvoja web stranica djelovala življe, modernije i profesionalnije te povećala angažman korisnika."
+                "description": "Uklopit ću suptilne animacije, prijelaze i efekte kako bi tvoja web-stranica djelovala življe, modernije i profesionalnije te povećala angažman korisnika."
             }
         }
     },
@@ -168,7 +168,7 @@
                 "label2": "Email"
             },
             "row2": {
-                "label1": "Ime trvtke (nije obavezno)",
+                "label1": "Naziv poduzeća (nije obavezno)",
                 "label2": "Broj mobitela"
             },
             "row3": {

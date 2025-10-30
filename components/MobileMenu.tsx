@@ -26,7 +26,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
     return (
         <div
             className={`
-        md:hidden fixed inset-0 z-[1000] transition-opacity duration-300
+        md:hidden w-screen fixed inset-0 z-[1000] transition-opacity duration-300 overflow-clip
         ${open ? "pointer-events-auto" : "pointer-events-none"}
       `}
             aria-hidden={!open}

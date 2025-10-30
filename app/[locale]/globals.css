@@ -167,7 +167,7 @@ textarea::-webkit-scrollbar-corner {
    Custom Tailwind-like utilities
    =============================== */
 @utility section {
-    @apply w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
+    @apply w-full overflow-x-clip flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
 }
 
 @utility maxw-container {
@@ -175,7 +175,7 @@ textarea::-webkit-scrollbar-corner {
 }
 
 @utility navbar-div-desktop {
-    @apply z-998 bg-bg/70 backdrop-blur-[15px] sticky top-0 border-b-1 border-border px-[clamp(1.25rem,4vw,var(--spacing-section))] w-full flex justify-center items-center;
+    @apply z-998 bg-bg/70 sticky top-0 backdrop-blur-[15px] border-b-1 border-border px-[clamp(1.25rem,4vw,var(--spacing-section))] w-full flex justify-center items-center;
 }
 
 @utility navbar-desktop {
