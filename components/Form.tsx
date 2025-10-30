@@ -4,7 +4,7 @@ const Form = () => {
     const t = useTranslations("Form");
 
     return (
-        <section className="formSection overflow-clip">
+        <section className="formSection overflow-x-clip">
             <div className="overflow-hidden w-full">
                 <div className="w-full flex flex-col justify-center items-center gap-[50px] pt-[3.125rem]">
                     <h2 className="text-[3.125rem] text-center font-bold text-secondary">{t("title")}</h2>

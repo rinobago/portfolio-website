@@ -40,6 +40,8 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           ${open ? "translate-x-0" : "translate-x-full"}
           flex flex-col
           px-[clamp(1.25rem,6vw,2rem)]
+          pt-[max(env(safe-area-inset-top),1rem)]
+          pb-[max(env(safe-area-inset-bottom),1rem)]
           gap-[15vh]
         `}
                 role="dialog"
