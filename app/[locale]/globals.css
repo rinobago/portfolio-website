@@ -170,6 +170,11 @@ textarea::-webkit-scrollbar-corner {
     @apply w-full overflow-x-clip flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))];
 }
 
+@utility h-screen-fix {
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
 @utility maxw-container {
     @apply max-w-[var(--container)];
 }

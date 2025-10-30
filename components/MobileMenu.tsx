@@ -41,6 +41,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           flex flex-col
           px-[clamp(1.25rem,6vw,2rem)]
           gap-[10vh]
+          h-screen-fix
         `}
                 role="dialog"
                 aria-modal="true"
