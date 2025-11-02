@@ -1,4 +1,12 @@
+"use client";
+
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0 },
+};
 
 const Form = () => {
     const t = useTranslations("Form");
@@ -7,9 +15,17 @@ const Form = () => {
         <section className="formSection overflow-x-clip">
             <div className="overflow-hidden w-full">
                 <div className="w-full flex flex-col justify-center items-center gap-[50px] pt-[3.125rem]">
-                    <h2 className="text-[3.125rem] text-center font-bold text-secondary">{t("title")}</h2>
+                    <motion.h2 className="text-[3.125rem] text-center font-bold text-secondary" variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }}>
+                        {t("title")}
+                    </motion.h2>
                     <div className="w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))]">
-                        <div className="card w-full max-w-[720px] flex flex-col justify-center items-center p-[32px]">
+                        <motion.div
+                            className="card w-full max-w-[720px] flex flex-col justify-center items-center p-[32px]"
+                            variants={fadeUp}
+                            initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                        >
                             <form method="POST" action="/api/contact" className="w-full">
                                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-[16px] gap-y-[24px]">
                                     {/* Name */}
@@ -92,7 +108,7 @@ const Form = () => {
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="h-[175px] w-full relative">

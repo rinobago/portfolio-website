@@ -1,4 +1,12 @@
+"use client";
+
+import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0 },
+};
 
 const Services = () => {
     const t = useTranslations("Services");
@@ -32,14 +40,28 @@ const Services = () => {
                     className="animate-breathe blob top-[73%] left-[50%] opacity-60 scale-x-40 scale-y-80 rotate-[60deg] max-[1100px]:top-[77%] max-[1100px]:left-[50%] max-[900px]:top-[85%] max-[900px]:left-[50%] max-[768px]:top-[80%] max-[768px]:left-[50%] max-[768px]:rotate-[30deg] max-[768px]:scale-x-50 max-[630px]:top-[70%] max-[630px]:left-[50%] max-[630px]:scale-x-110 max-[630px]:scale-y-150 max-[350px]:scale-x-130 max-[350px]:scale-y-180"
                 />
                 <div className="w-full flex flex-col justify-center items-center gap-[115px]">
-                    <div className="w-full flex flex-col justify-center items-center gap-[0.75rem] md:gap-8 text-center">
+                    <motion.div
+                        className="w-full flex flex-col justify-center items-center gap-[0.75rem] md:gap-8 text-center"
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ amount: 0.5, once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <h2 className="text-[2.5rem] md:text-[3.125rem] font-bold">{t("title")}</h2>
                         <p className="text-base md:text-xl text-muted w-[clamp(300px,30vw,375px)]">
                             {t("description.row1")}
                             {t("description.row2")}
                         </p>
-                    </div>
-                    <div className="card w-full max-w-[658px] flex flex-col justify-center items-center gap-[45px] px-[25px] max-[350px]:px-[15px] py-[35px]">
+                    </motion.div>
+                    <motion.div
+                        className="card w-full max-w-[658px] flex flex-col justify-center items-center gap-[45px] px-[25px] max-[350px]:px-[15px] py-[35px]"
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ amount: 0.2, once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <div className="w-full flex flex-col justify-center items-center gap-[25px]">
                             <h3 className="font-semibold text-[1.875rem]">{t("card.title")}</h3>
                             <h3 className="font-semibold text-[1.875rem]">{t("card.price")}</h3>
@@ -68,45 +90,89 @@ const Services = () => {
                             <p className="text-xl max-[350px]:text-[1rem] text-fg w-full">{t("card.delivery")}</p>
                         </div>
                         <p className="text-xl max-[350px]:text-[1rem] text-secondary text-center w-full">{t("card.description")}</p>
-                    </div>
+                    </motion.div>
                     <div className="w-full flex flex-col justify-center items-center gap-[54px]">
-                        <h2 className={`text-[2.5rem] md:text-[3.125rem] ${titleLeading} text-center font-bold`}>{t("included.title")}</h2>
+                        <motion.h2
+                            className={`text-[2.5rem] md:text-[3.125rem] ${titleLeading} text-center font-bold`}
+                            variants={fadeUp}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ amount: 0.5, once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            {t("included.title")}
+                        </motion.h2>
                         <ul className="w-full max-w-[845px] flex flex-col justify-start gap-[15px] text-[0.875rem] md:text-xl text-fg">
-                            <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
+                            <motion.li
+                                className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]"
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ amount: 0.5, once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
                                     <span className="font-bold text-primary">{t("included.services.row1.title")}</span>
                                     {t("included.services.row1.description")}
                                 </p>
-                            </li>
-                            <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
+                            </motion.li>
+                            <motion.li
+                                className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]"
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ amount: 0.5, once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
                                     <span className="font-bold text-primary">{t("included.services.row2.title")}</span>
                                     {t("included.services.row2.description")}
                                 </p>
-                            </li>
-                            <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
+                            </motion.li>
+                            <motion.li
+                                className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]"
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ amount: 0.5, once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
                                     <span className="font-bold text-primary">{t("included.services.row3.title")}</span>
                                     {t("included.services.row3.description")}
                                 </p>
-                            </li>
-                            <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
+                            </motion.li>
+                            <motion.li
+                                className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]"
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ amount: 0.5, once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
                                     <span className="font-bold text-primary">{t("included.services.row4.title")}</span>
                                     {t("included.services.row4.description")}
                                 </p>
-                            </li>
-                            <li className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]">
+                            </motion.li>
+                            <motion.li
+                                className="w-full h-auto flex gap-[10px] px-[10px] py-[10px]"
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ amount: 0.5, once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <img src="/Checkmark.svg" alt="checkmark" />
                                 <p>
                                     <span className="font-bold text-primary">{t("included.services.row5.title")}</span>
                                     {t("included.services.row5.description")}
                                 </p>
-                            </li>
+                            </motion.li>
                         </ul>
                     </div>
                 </div>

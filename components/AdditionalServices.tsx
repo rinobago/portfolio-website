@@ -1,5 +1,13 @@
+"use client";
+
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import DropdownRow from "./DropdownRow";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0 },
+};
 
 const AdditionalServices = () => {
     const t = useTranslations("AdditionalServices");
@@ -19,14 +27,30 @@ const AdditionalServices = () => {
                     className="animate-breathe blob top-[-35%] left-[47%] scale-x-70 rotate-[-15deg] max-[850px]:top-[-30%] max-[850px]:left-[47%] max-[550px]:top-[-20%] max-[550px]:left-[47%] max-[550px]:scale-x-120 max-[550px]:scale-y-150 max-[420px]:top-[0%] max-[420px]:left-[47%]"
                 />
                 <div className="max-w-[1150px] w-full flex flex-col justify-center items-center gap-[clamp(40px,6vw,115px)]">
-                    <h2 className="text-[2.5rem] text-center md:text-[3.125rem] font-bold text-secondary">{t("title")}</h2>
-                    <ul className="card w-full flex flex-col justify-center items-center gap-[10px] px-[25px] py-[clamp(10px,3vw,25px)] [&>li:last-child]:border-none">
+                    <motion.h2
+                        className="text-[2.5rem] text-center md:text-[3.125rem] font-bold text-secondary"
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ amount: 0.5, once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        {t("title")}
+                    </motion.h2>
+                    <motion.ul
+                        className="card w-full flex flex-col justify-center items-center gap-[10px] px-[25px] py-[clamp(10px,3vw,25px)] [&>li:last-child]:border-none"
+                        variants={fadeUp}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ amount: 0.2, once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <DropdownRow title={t("card.row1.title")} desc={t("card.row1.description")} />
                         <DropdownRow title={t("card.row2.title")} desc={t("card.row2.description")} />
                         <DropdownRow title={t("card.row3.title")} desc={t("card.row3.description")} />
                         <DropdownRow title={t("card.row4.title")} desc={t("card.row4.description")} />
                         <DropdownRow title={t("card.row5.title")} desc={t("card.row5.description")} />
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
         </section>

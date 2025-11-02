@@ -1,4 +1,12 @@
+"use client";
+
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 28 },
+    show: { opacity: 1, y: 0 },
+};
 
 const About = () => {
     const t = useTranslations("About");
@@ -6,7 +14,14 @@ const About = () => {
     return (
         <section className="section">
             <div id="about" className="about text-xl text-center pb-[217px] md:pb-[330px] scroll-mt-[3rem] md:scroll-mt-[7rem]">
-                <div className="w-full max-[867]:text-[clamp(1rem,2.3vw,1.25rem)] max-[768]:text-[clamp(1rem,4vw,1.25rem)] justify-center items-center justify-items-stretch grid grid-cols-1 grid-rows-[360px] md:grid-cols-[minmax(0,485px)_minmax(0,485px)] gap-[25px]">
+                <motion.div
+                    className="w-full max-[867]:text-[clamp(1rem,2.3vw,1.25rem)] max-[768]:text-[clamp(1rem,4vw,1.25rem)] justify-center items-center justify-items-stretch grid grid-cols-1 grid-rows-[360px] md:grid-cols-[minmax(0,485px)_minmax(0,485px)] gap-[25px]"
+                    variants={fadeUp}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ amount: 0.2, once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <div className="card h-full min-h-[360px] flex flex-col gap-6 justify-center items-center py-[clamp(10px,4vw,15px)] px-[clamp(15px,4vw,25px)] break-words">
                         <p>
                             {t("card1.p1.fg")}
@@ -40,7 +55,7 @@ const About = () => {
                             {t("card2.p2.your")}
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
