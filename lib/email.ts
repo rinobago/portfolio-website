@@ -28,7 +28,7 @@ export async function sendInquiryEmails(data: InquiryPayload) {
         subject: "Hvala Vam na upitu 👋",
         text: `Poštovani/a ${name},
 
-Hvala Vam što ste mi se obratili s Vašom idejom za web-stranicu. Primio sam Vašu poruku i pažljivo ću je proučiti.
+hvala Vam što ste mi se obratili s Vašom idejom za web-stranicu. Primio sam Vašu poruku i pažljivo ću je proučiti.
 
 Uskoro ću Vam se javiti s povratnim informacijama.
 
