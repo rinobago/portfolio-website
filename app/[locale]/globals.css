@@ -44,16 +44,18 @@
 
     /* Color tokens -> bg-primary, text-fg, border-border, etc. */
     --color-bg: #0f1115;
-    --color-fg: #e6e8eb; /* slate-900-ish */
-    --color-muted: #9ca3af; /* slate-500 */
-    --color-primary: #8b5cf6; /* brand */
-    --color-secondary: #c084fc; /* emerald-500 */
-    --color-accent: #e9d5ff; /* pink-400 */
+    --color-fg: #e6e8eb;
+    --color-muted: #9ca3af;
+    --color-primary: #8b5cf6;
+    --color-secondary: #c084fc;
+    --color-accent: #e9d5ff;
     --color-gold: #d4af37;
-    --color-border: #26292f; /* slate-200 */
+    --color-border: #26292f;
     --color-card: #1a1c20;
     --color-white: 255 255 255; /* ✅ for text-white, bg-white */
     --color-black: 0 0 0;
+    --color-success: #22c55e;
+    --color-error: #dc2626;
 
     /* Radius tokens -> rounded-lg/xl/2xl */
     --radius-sm: 4px;

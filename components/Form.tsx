@@ -1,8 +1,11 @@
 "use client";
 
+import { Spinner } from "@heroui/spinner";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
+import Checkmark from "./icons/Checkmark";
+import ErrorIcon from "./icons/ErrorIcon";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -173,7 +176,7 @@ const Form = () => {
                                     {/* Submit (span 2 cols on md+) */}
                                     <div className="w-full flex flex-col justify-center items-center pt-[8px] sm:col-span-2">
                                         <button type="submit" disabled={status === "loading"} className="btn-primary text-[1.563rem] px-[30px] py-[18px]">
-                                            {t("card.button")}
+                                            {status === "loading" ? <Spinner /> : status === "success" ? <Checkmark /> : status === "error" ? <ErrorIcon /> : t("card.button")}
                                         </button>
                                     </div>
                                 </div>
