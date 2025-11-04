@@ -34,9 +34,9 @@ const Footer = () => {
                             <img src="/Telephone.svg" alt="Telephone" className="w-5 h-5" />
                             <span className="hover-muted-white">+385 98 9466 220</span>
                         </a>
-                        <a href="mailto:rino.bago@gmail.com" className="text-muted text-[0.875rem] md:text-base flex justify-center items-center gap-1">
+                        <a href="mailto:contact@rinobago.com" className="text-muted text-[0.875rem] md:text-base flex justify-center items-center gap-1">
                             <img src="/Mail.svg" alt="Mail" className="w-5 h-5" />
-                            <span className="hover-muted-white">rino.bago@gmail.com</span>
+                            <span className="hover-muted-white">contact@rinobago.com</span>
                         </a>
                         <div className="flex justify-center items-center gap-5">
                             <a href="https://www.instagram.com/rinobago" target="_blank" rel="noopener noreferrer">
