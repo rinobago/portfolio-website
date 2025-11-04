@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useState } from "react";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -10,6 +11,65 @@ const fadeUp = {
 
 const Form = () => {
     const t = useTranslations("Form");
+    const locale = useLocale();
+
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [error, setError] = useState<string | null>(null);
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [company, setCompany] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+
+    function setFormData() {
+        setName("");
+        setEmail("");
+        setCompany("");
+        setPhone("");
+        setMessage("");
+    }
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setStatus("loading");
+        setError(null);
+
+        const formEl = e.currentTarget;
+        const formData = new FormData(formEl);
+
+        const body = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            company: formData.get("company") || undefined,
+            phone: formData.get("phone") || undefined,
+            message: formData.get("message"),
+            company_website: formData.get("company_website") || "",
+            locale: locale === "hr" ? "hr" : "en",
+        };
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body),
+            });
+
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || "Failed to send message.");
+            }
+
+            setStatus("success");
+            formEl.reset();
+            setFormData();
+        } catch (err: any) {
+            console.error("Form submit error:", err);
+            setStatus("error");
+            setFormData();
+            setError(err.message || "Something went wrong.");
+        }
+    }
 
     return (
         <section className="formSection overflow-x-clip">
@@ -26,7 +86,7 @@ const Form = () => {
                             animate="show"
                             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                         >
-                            <form method="POST" action="/api/contact" className="w-full">
+                            <form onSubmit={handleSubmit} className="w-full">
                                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-[16px] gap-y-[24px]">
                                     {/* Name */}
                                     <div className="w-full flex flex-col justify-center items-start gap-[2px]">
@@ -37,6 +97,8 @@ const Form = () => {
                                             id="name"
                                             name="name"
                                             type="text"
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
                                             required
                                             className="w-full h-[48px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0"
                                         />
@@ -51,6 +113,8 @@ const Form = () => {
                                             id="email"
                                             name="email"
                                             type="email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                             required
                                             className="w-full h-[48px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0"
                                         />
@@ -65,6 +129,8 @@ const Form = () => {
                                             id="company"
                                             name="company"
                                             type="text"
+                                            value={company}
+                                            onChange={(e) => setCompany(e.target.value)}
                                             className="w-full h-[48px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0"
                                         />
                                     </div>
@@ -78,6 +144,8 @@ const Form = () => {
                                             id="phone"
                                             name="phone"
                                             type="tel"
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
                                             className="w-full h-[48px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0"
                                         />
                                     </div>
@@ -93,6 +161,8 @@ const Form = () => {
                                             rows={6}
                                             required
                                             placeholder={t("card.row3.placeholder")}
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
                                             className="placeholder:max-[350px]:text-[0.8rem] resize-y w-full h-[160px] rounded-[8px] px-[16px] py-[12px] border-1 border-muted outline-none focus:border-[#8b5cf6] focus:ring-1 focus:ring-[#8b5cf6] focus:ring-offset-0 scrollbar"
                                         />
                                     </div>
@@ -102,7 +172,7 @@ const Form = () => {
 
                                     {/* Submit (span 2 cols on md+) */}
                                     <div className="w-full flex flex-col justify-center items-center pt-[8px] sm:col-span-2">
-                                        <button type="submit" className="btn-primary text-[1.563rem] px-[30px] py-[18px]">
+                                        <button type="submit" disabled={status === "loading"} className="btn-primary text-[1.563rem] px-[30px] py-[18px]">
                                             {t("card.button")}
                                         </button>
                                     </div>
