@@ -29,7 +29,7 @@
                 "perform": "rezultate"
             },
             "p2": {
-                "fg1": "Tvoja web stranica je ",
+                "fg1": "Tvoja web-stranica je ",
                 "face": "lice",
                 "fg2": " tvog brenda - prvi dojam koji ostavljaš na klijente."
             },
@@ -90,7 +90,7 @@
             "services": {
                 "row1": {
                     "title": "RESPONZIVAN DIZAJN",
-                    "description": " - Tvoja će web stranica izgledati i raditi savršeno na svakom uređaju - od velikih zaslona do tableta i pametnih telefona. Svaku stranicu pažljivo dizajniram i testiram kako bi bila u potpunosti prilagodljiva, pružajući tvojim posjetiteljima besprijekorno i ugodno iskustvo bez obzira na veličinu zaslona."
+                    "description": " - Tvoja će web-stranica izgledati i raditi savršeno na svakom uređaju - od velikih zaslona do tableta i pametnih telefona. Svaku stranicu pažljivo dizajniram i testiram kako bi bila u potpunosti prilagodljiva, pružajući tvojim posjetiteljima besprijekorno i ugodno iskustvo bez obzira na veličinu zaslona."
                 },
                 "row2": {
                     "title": "BRZO UČITAVANJE",
@@ -122,7 +122,7 @@
         "title": "Dodatne usluge",
         "card": {
             "row1": {
-                "title": "Održavanje web stranice",
+                "title": "Održavanje web-stranice",
                 "description": "Održavam tvoju stranicu brzom, sigurnom i ažuriranom uz mjesečne provjere performansi, nadogradnje sadržaja i tehničku podršku."
             },
             "row2": {
