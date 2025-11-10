@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Form from "@/components/Form";
+import Form from "@/components/Form/Form";
 import Navbar from "@/components/Navbar/Navbar";
 
 const page = () => {

@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import CtaSectionClient from "./CtaSectionClient";
 
-const CtaSection = () => {
-    const t = useTranslations("CtaSection");
+const CtaSection = async () => {
+    const t = await getTranslations("CtaSection");
 
     return (
         <div className="ctaSection">

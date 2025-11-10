@@ -1,23 +1,25 @@
-"use client";
+import { getLocale, getTranslations } from "next-intl/server";
+import HeroClient from "./HeroClient";
 
-import { motion } from "motion/react";
-import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-
-const fadeUp = {
-    hidden: { opacity: 0, y: 28 },
-    show: { opacity: 1, y: 0 },
-};
-
-const MotionImage = motion(Image);
-
-const Hero = () => {
-    const t = useTranslations("Hero");
-    const locale = useLocale();
+const Hero = async () => {
+    const t = await getTranslations("Hero");
+    const locale = await getLocale();
 
     const titleSize = locale === "hr" ? "text-[clamp(2.35rem,4vw,3.5rem)]" : "text-[clamp(3.1rem,5.2vw,4.375rem)]";
+
     const titleLeading = locale === "hr" ? "leading-[clamp(40px,5vw,71px)]" : "leading-[clamp(55px,6.5vw,88px)]";
+
+    const content = {
+        titleFg: t("title.fg"),
+        titleColored: t("title.colored"),
+        descriptionGreeting: t("description.greeting"),
+        descriptionBuild: t("description.build"),
+        descriptionModern: t("description.modern"),
+        descriptionFast: t("description.fast"),
+        descriptionUnforgettable: t("description.unforgettable"),
+        quote: t("quote"),
+        work: t("work"),
+    };
 
     return (
         <section className="section">
@@ -39,67 +41,7 @@ const Hero = () => {
                     style={{ animationDelay: "1s" }}
                     className="animate-breathe blob top-[30%] left-[60%] scale-x-90 scale-y-105 rotate-[-50deg] max-[1140px]:top-[65%] max-[1140px]:left-[-10%] max-[823px]:top-[75%] max-[823px]:left-[-12%] max-[823px]:scale-y-110 max-[600px]:top-[65%] max-[600px]:left-[-20%] max-[600px]:scale-y-150 max-[600px]:scale-x-120 max-[430px]:top-[70%] max-[430px]:left-[-20%] max-[430px]:scale-x-190"
                 />
-                <div className="w-full h-full relative flex flex-col justify-center items-center [@media(min-width:1140px)]:flex-row [@media(min-width:1140px)]:gap-[clamp(200px,27vw,500px)] gap-[2.5rem]">
-                    <div className="w-full [@media(min-width:1140px)]:w-[44.188rem] flex flex-col items-center [@media(min-width:1140px)]:items-baseline gap-4">
-                        <motion.h1
-                            className={`font-semibold text-center [@media(min-width:1140px)]:text-left ${titleSize} ${titleLeading} w-full [@media(min-width:1140px)]:w-[44.188rem]`}
-                            variants={fadeUp}
-                            initial="hidden"
-                            animate="show"
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                        >
-                            {t("title.fg")}
-                            <span className="text-primary">{t("title.colored")}</span>
-                        </motion.h1>
-                        <motion.p
-                            className="w-full text-center text-base [@media(min-width:1140px)]:text-left [@media(min-width:1140px)]:text-xl max-w-[23.438rem]"
-                            variants={fadeUp}
-                            initial="hidden"
-                            animate="show"
-                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                        >
-                            {t("description.greeting")}
-                            <span className="text-secondary">Rino</span>
-                            {t("description.build")}
-                            <span className="font-bold">
-                                <span className="text-secondary">{t("description.modern")}</span>
-                                {t("description.fast")}
-                                <span className="text-gold">{t("description.unforgettable")}</span>
-                            </span>
-                            .
-                        </motion.p>
-                        <div className="mt-[4.5rem] flex max-[350px]:flex-col gap-4 justify-center items-center">
-                            <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}>
-                                <Link href="/contact" className="btn-primary whitespace-nowrap shrink-0">
-                                    {t("quote")}
-                                </Link>
-                            </motion.div>
-                            <motion.div variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}>
-                                <Link href="#projects" className="btn-secondary-outline whitespace-nowrap shrink-0">
-                                    <div className="flex gap-[10px]">
-                                        <span>{t("work")}</span>
-                                        <img src="/View My Work.svg" alt="arrow" className="aspect-square max-[350px]:w-[14px]" />
-                                    </div>
-                                </Link>
-                            </motion.div>
-                        </div>
-                    </div>
-                    <div className="relative w-[326px] h-[326px] flex justify-center [@media(min-width:1140px)]:w-[100px] [@media(min-width:1140px)]:static">
-                        <div className="[@media(min-width:1140px)]:right-[0%] absolute">
-                            <MotionImage
-                                src="/MyPhoto.png"
-                                alt="Rino Bago image"
-                                width={700}
-                                height={700}
-                                className="w-[45vw] max-[1140px]:w-[60vw] max-w-[700px] min-w-[325px] max-[370px]:w-[85vw] max-[370px]:min-w-[278px] aspect-square"
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate="show"
-                                transition={{ duration: 0.6, ease: "easeOut" }}
-                            ></MotionImage>
-                        </div>
-                    </div>
-                </div>
+                <HeroClient content={content} titleSize={titleSize} titleLeading={titleLeading} />
             </div>
         </section>
     );

@@ -1,13 +1,13 @@
-import About from "@/components/About";
-import AdditionalServices from "@/components/AdditionalServices";
+import About from "@/components/About/About";
+import AdditionalServices from "@/components/AdditionalServices/AdditionalServices";
 import CtaSection from "@/components/CtaSection/CtaSection";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero/Hero";
 import Navbar from "@/components/Navbar/Navbar";
-import Projects from "@/components/Projects";
-import ReachOut from "@/components/ReachOut";
-import Ready from "@/components/Ready";
-import Services from "@/components/Services";
+import Projects from "@/components/ProjectsSection/Projects";
+import ReachOut from "@/components/ReachOut/ReachOut";
+import Ready from "@/components/Ready/Ready";
+import Services from "@/components/ServicesSection/Services";
 
 const Page = () => {
     return (
