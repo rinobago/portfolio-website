@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect } from "react";
-import { useBodyScrollLock } from "./hooks/BodyLock";
+import { useBodyScrollLock } from "../hooks/BodyLock";
 import LanguageButton from "./LanguageButton";
 
 type MobileMenuProps = {

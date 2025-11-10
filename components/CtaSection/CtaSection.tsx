@@ -1,13 +1,5 @@
-"use client";
-
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-
-const fadeUp = {
-    hidden: { opacity: 0, y: 28 },
-    show: { opacity: 1, y: 0 },
-};
+import CtaSectionClient from "./CtaSectionClient";
 
 const CtaSection = () => {
     const t = useTranslations("CtaSection");
@@ -15,23 +7,10 @@ const CtaSection = () => {
     return (
         <div className="ctaSection">
             <div className="w-full flex flex-col justify-center items-center text-center overflow-clip">
-                <div className="h-[213px] md:h-[330px] w-full"></div>
-                <motion.p
-                    className="text-[clamp(1.875rem,6.5vw,3.125rem)] mb-[20px] md:mb-[75px] px-[20px]"
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ amount: 0.5, once: true }}
-                    transition={{ duration: 0.6 }}
-                >
-                    {t("text.fg")}
-                    <span className="font-bold text-secondary">{t("text.colored")}</span>?
-                </motion.p>
-                <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ amount: 0.5, once: true }} transition={{ duration: 0.6 }}>
-                    <Link href="/contact" className="max-w-[280px] md:max-w-[510px] btn-primary text-xl md:text-[1.563rem] px-[30px] py-[25px]">
-                        {t("button")}
-                    </Link>
-                </motion.div>
+                <div className="h-[213px] md:h-[330px] w-full" />
+
+                <CtaSectionClient fg={t("text.fg")} colored={t("text.colored")} buttonLabel={t("button")} />
+
                 <div className="relative h-[213px] md:h-[330px] w-full">
                     <img
                         src="/PurpleBlob.svg"

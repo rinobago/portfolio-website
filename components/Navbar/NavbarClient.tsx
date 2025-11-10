@@ -1,14 +1,21 @@
 "use client";
-import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import { useState } from "react";
 import LanguageButton from "./LanguageButton";
 import MobileMenu from "./MobileMenu";
 
-const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+type NavbarClientProps = {
+    labels: {
+        about: string;
+        projects: string;
+        services: string;
+        contact: string;
+    };
+};
 
-    const t = useTranslations("Navbar");
+const NavbarClient = ({ labels }: NavbarClientProps) => {
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <>
@@ -20,21 +27,25 @@ const Navbar = () => {
                             Rino Bago - <span className="text-primary">Web Developer</span>
                         </p>
                     </a>
+
+                    {/* Desktop links */}
                     <div className="hidden md:flex col-start-3 md:justify-self-end gap-[1.25rem] justify-center items-center">
                         <Link href="/#about" className="text-muted font-semibold hover-muted-white">
-                            {t("about")}
+                            {labels.about}
                         </Link>
                         <Link href="/#projects" className="text-muted font-semibold hover-muted-white">
-                            {t("projects")}
+                            {labels.projects}
                         </Link>
                         <Link href="/#services" className="text-muted font-semibold hover-muted-white">
-                            {t("services")}
+                            {labels.services}
                         </Link>
                         <Link href="/contact" className="btn-primary-outline">
-                            {t("contact")}
+                            {labels.contact}
                         </Link>
                         <LanguageButton variant="desktop" />
                     </div>
+
+                    {/* Mobile menu button */}
                     <div className="col-start-3 justify-self-end md:hidden">
                         <button aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen((v) => !v)} className="w-[26px] h-[26px] grid place-items-center cursor-pointer">
                             <img src="/HamburgerIcon.svg" alt="Open menu" className="w-[26px] aspect-square" />
@@ -42,9 +53,11 @@ const Navbar = () => {
                     </div>
                 </nav>
             </div>
+
+            {/* Mobile menu overlay */}
             <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
         </>
     );
 };
 
-export default Navbar;
+export default NavbarClient;
