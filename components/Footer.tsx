@@ -49,7 +49,12 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <p className="font-light text-muted text-[0.875rem] md:text-base">© {new Date().getFullYear()} | Rino Bago</p>
+            <div className="flex flex-col justify-center items-center gap-[5px]">
+                <p className="font-light text-muted text-[0.875rem] md:text-base">© {new Date().getFullYear()} | Rino Bago</p>
+                <Link href="/privacy-policy" className="text-sm text-muted hover:text-fg">
+                    {t("privacy")}
+                </Link>
+            </div>
         </div>
     );
 };

@@ -158,7 +158,8 @@
             "projects": "Projects",
             "services": "Services"
         },
-        "contact": "Contact"
+        "contact": "Contact",
+        "privacy": "Privacy Policy"
     },
     "Form": {
         "title": "Contact Me",
@@ -177,5 +178,29 @@
             },
             "button": "Send"
         }
+    },
+    "Privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: 10 November 2025",
+        "intro": "This Privacy Policy explains how I collect, use and protect your personal data when you visit rinobago.com (\"Website\").",
+        "controllerTitle": "1. Data controller",
+        "controllerText": "The data controller responsible for your personal data is:\n\nRino Bago\nWebsite: https://rinobago.com\nEmail: contact@rinobago.com",
+        "dataTitle": "2. Data I collect and why",
+        "dataText": "When you contact me via the contact form or by email, I may collect your name, email address and any other information you include in your message. I use this data only to read and respond to your inquiry and to communicate with you about potential projects.",
+        "technicalTitle": "3. Technical and usage data",
+        "technicalText": "When you visit the Website, certain technical information may be collected automatically, such as your IP address, browser type, operating system and the pages you visit. I use this information to keep the Website secure, improve its performance and understand how visitors use it.",
+        "sharingTitle": "4. Sharing your data",
+        "sharingText": "I do not sell your personal data. I may share it only with trusted service providers (such as hosting, email or analytics providers) who help me operate the Website and who are contractually required to protect your data.",
+        "retentionTitle": "5. How long I keep your data",
+        "retentionText": "I keep your personal data only for as long as necessary for the purposes for which it was collected or as required by law or legitimate interests (for example, to establish or defend legal claims). Contact messages are typically kept for up to 24 months after our last communication.",
+        "rightsTitle": "6. Your rights",
+        "rightsText": "You have the right to request access to your personal data, correction of inaccurate data, deletion of data, restriction of processing, data portability and to object to certain types of processing. To exercise these rights, contact me at contact@rinobago.com. You also have the right to lodge a complaint with your local data protection authority.",
+        "cookiesTitle": "7. Cookies",
+        "cookiesText": "The Website may use cookies to function properly and to help me understand how it is used. Where required by law, non-essential cookies are only used with your consent, which you can withdraw via your browser settings.",
+        "changesTitle": "8. Changes to this policy",
+        "changesText": "I may update this Privacy Policy from time to time to reflect changes in legal requirements or how I process personal data. The updated version will always be available on this page.",
+        "contactTitle": "9. Contact",
+        "contactText": "If you have any questions about this Privacy Policy or how I handle your personal data, please contact me at contact@rinobago.com.",
+        "disclaimer": "This text is a general informational template and does not constitute legal advice. For full compliance, please consult a qualified legal professional."
     }
 }

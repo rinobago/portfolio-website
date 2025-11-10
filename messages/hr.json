@@ -158,7 +158,8 @@
             "projects": "Projekti",
             "services": "Usluge"
         },
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "privacy": "Politika privatnosti"
     },
     "Form": {
         "title": "Kontaktiraj me",
@@ -177,5 +178,29 @@
             },
             "button": "Pošalji"
         }
+    },
+    "Privacy": {
+        "title": "Politika privatnosti",
+        "lastUpdated": "Zadnje ažuriranje: 10. studenoga 2025.",
+        "intro": "Ova Politika privatnosti objašnjava kako prikupljam, koristim i štitim Vaše osobne podatke kada posjetite rinobago.com (\"Web-stranica\").",
+        "controllerTitle": "1. Voditelj obrade",
+        "controllerText": "Za Vaše osobne podatke odgovoran je:\n\nRino Bago\nWeb-stranica: https://rinobago.com\nEmail: contact@rinobago.com",
+        "dataTitle": "2. Koje podatke prikupljam i zašto",
+        "dataText": "Kada mi se obratite putem kontakt forme ili e-maila, mogu prikupiti Vaše ime i prezime, e-mail adresu te sve informacije koje navedete u poruci. Ove podatke koristim isključivo kako bih pročitao i odgovorio na Vaš upit te dogovorio eventualnu suradnju.",
+        "technicalTitle": "3. Tehnički podaci i analitika",
+        "technicalText": "Prilikom Vašeg posjeta Web-stranici mogu se automatski prikupljati određeni tehnički podaci, poput IP adrese, tipa preglednika, operacijskog sustava i stranica koje posjećujete. Te informacije koristim za održavanje sigurnosti, poboljšanje performansi i razumijevanje načina korištenja stranice.",
+        "sharingTitle": "4. Dijeljenje podataka",
+        "sharingText": "Ne prodajem Vaše osobne podatke. Podaci se mogu dijeliti samo s pouzdanim pružateljima usluga (npr. hosting, e-mail, analitika) koji mi pomažu u radu Web-stranice i koji su ugovorno obvezani štititi Vaše podatke.",
+        "retentionTitle": "5. Rok čuvanja podataka",
+        "retentionText": "Vaše osobne podatke čuvam samo onoliko dugo koliko je potrebno za svrhe za koje su prikupljeni ili koliko to zahtijeva zakon ili legitimni interesi (npr. obrana pravnih zahtjeva). Kontakt poruke u pravilu se čuvaju do 24 mjeseca nakon završetka komunikacije.",
+        "rightsTitle": "6. Vaša prava",
+        "rightsText": "Imate pravo zatražiti pristup svojim osobnim podacima, ispravak netočnih podataka, brisanje podataka, ograničenje obrade, prenosivost podataka te prigovor na određene obrade. Svoja prava možete ostvariti slanjem poruke na contact@rinobago.com. Također imate pravo podnijeti pritužbu nadzornom tijelu za zaštitu podataka.",
+        "cookiesTitle": "7. Kolačići",
+        "cookiesText": "Web-stranica može koristiti kolačiće kako bi ispravno funkcionirala i kako bih bolje razumio kako se koristi. Kada je to zakonom potrebno, neesencijalni kolačići koriste se tek uz Vašu privolu, koju možete povući putem postavki preglednika.",
+        "changesTitle": "8. Promjene ove politike",
+        "changesText": "Ovu Politiku privatnosti mogu povremeno ažurirati kako bih je uskladio s promjenama u zakonodavstvu ili načinu na koji obrađujem podatke. Ažurirana verzija uvijek će biti dostupna na ovoj stranici.",
+        "contactTitle": "9. Kontakt",
+        "contactText": "Ako imate pitanja o ovoj Politici privatnosti ili načinu na koji obrađujem Vaše podatke, možete mi se obratiti na contact@rinobago.com.",
+        "disclaimer": "Ovaj tekst predstavlja općeniti informativni predložak i ne smatra se pravnim savjetom. Za potpunu usklađenost s propisima preporučujem konzultaciju s pravnim stručnjakom."
     }
 }
