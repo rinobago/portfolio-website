@@ -92,9 +92,9 @@ const FormClient = ({ content, locale }: FormClientProps) => {
 
     return (
         <div className="w-full flex flex-col justify-center items-center gap-[50px] pt-[3.125rem]">
-            <motion.h2 className="text-[3.125rem] text-center font-bold text-secondary" variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }}>
+            <motion.h1 className="text-[3.125rem] text-center font-bold text-secondary" variants={fadeUp} initial="hidden" animate="show" transition={{ duration: 0.6, ease: "easeOut" }}>
                 {content.title}
-            </motion.h2>
+            </motion.h1>
             <div className="w-full flex flex-col justify-center items-center px-[clamp(1.5rem,4vw,var(--spacing-section))]">
                 <motion.div
                     className="card w-full max-w-[720px] flex flex-col justify-center items-center p-[32px]"

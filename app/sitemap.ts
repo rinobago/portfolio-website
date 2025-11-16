@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://rinobago.com";
 
-    const routes = ["/", "/contact"];
+    const routes = ["/", "/contact", "/privacy-policy"];
 
     const lastModified = new Date().toISOString().split("T")[0];
 
