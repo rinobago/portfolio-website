@@ -9,6 +9,11 @@ export default function robots(): MetadataRoute.Robots {
                 userAgent: "*",
                 allow: "/",
             },
+            {
+                userAgent: "Googlebot-Image",
+                disallow: "/", // block ALL images by default
+                allow: ["/rino-bago-picture-image.JPG"], // whitelist ONLY this image
+            },
         ],
         sitemap: `${baseUrl}/sitemap.xml`,
         host: baseUrl,

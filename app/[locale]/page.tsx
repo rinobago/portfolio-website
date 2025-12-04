@@ -8,6 +8,12 @@ import Projects from "@/components/ProjectsSection/Projects";
 import ReachOut from "@/components/ReachOut/ReachOut";
 import Ready from "@/components/Ready/Ready";
 import Services from "@/components/ServicesSection/Services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Rino Bago - Web Developer",
+    description: "Web developer building fast, modern and conversion-focused websites for businesses. Specialist in Next.js, SEO and high-performance web design.",
+};
 
 const Page = () => {
     return (

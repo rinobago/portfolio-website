@@ -7,12 +7,24 @@ import "./globals.css";
 const baseUrl = "https://rinobago.com";
 
 export const metadata: Metadata = {
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: false,
+            "max-video-preview": -1,
+            "max-image-preview": "none",
+            "max-snippet": -1,
+        },
+    },
     metadataBase: new URL(baseUrl),
     title: {
         default: "Rino Bago - Web Developer",
         template: "%s | Rino Bago",
     },
-    description: "Web developer crafting modern, fast and unforgettable websites that convert visitors into clients. Custom Next.js sites, SEO setup, and ongoing maintenance.",
+    description: "Web developer building fast, modern and conversion-focused websites for businesses. Specialist in Next.js, SEO and high-performance web design.",
     keywords: [
         // English
         "Rino Bago",
