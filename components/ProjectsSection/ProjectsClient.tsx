@@ -27,13 +27,12 @@ const ProjectsClient = ({ content }: ProjectsClientProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ amount: 0.5, once: true }}
-                transition={{ duration: 0.6 }}
-            >
+                transition={{ duration: 0.6 }}>
                 <h2 className="text-[2.5rem] text-center md:text-[3.125rem] font-bold">{title}</h2>
                 <p className="text-base text-center md:text-xl text-muted">{description}</p>
             </motion.div>
             <motion.a
-                href="https://www.etc.com.hr/"
+                href="https://www.laurusnobilisrent.com"
                 className="card relative w-[clamp(297px,80vw,680px)] aspect-[17/12] overflow-hidden mt-[85px] md:mt-[100px] hover:brightness-125 hover:scale-101 active:brightness-95 active:scale-99 cursor-pointer ease-in-out transition transform duration-50"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -41,12 +40,19 @@ const ProjectsClient = ({ content }: ProjectsClientProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ amount: 0.5, once: true }}
-                transition={{ duration: 0.6 }}
-            >
-                <motion.p className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]" variants={fadeUp} transition={{ delay: 0.2, duration: 0.6 }}>
+                transition={{ duration: 0.6 }}>
+                <motion.p
+                    className="absolute z-1 font-semibold text-[clamp(1rem,3.5vw,1.75rem)] top-[15px] left-[20px]"
+                    variants={fadeUp}
+                    transition={{ delay: 0.2, duration: 0.6 }}>
                     {projectName}
                 </motion.p>
-                <Image src="/EtCetera.png" alt="EtCetera banner" fill className="w-full h-full object-cover block opacity-[30%] select-none" />
+                <Image
+                    src="/LaurusNobilis.jpg"
+                    alt="Laurus Nobilis apartment image for website"
+                    fill
+                    className="w-full h-full object-cover block opacity-[30%] select-none"
+                />
             </motion.a>
         </>
     );
