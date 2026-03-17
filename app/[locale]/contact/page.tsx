@@ -5,7 +5,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Contact",
-    description: "Contact Rino Bago for inquiries, support, or feedback. I'm here to help and look forward to hearing from you.",
+    description:
+        "Contact Rino Bago for inquiries, support, or feedback. I'm here to help and look forward to hearing from you.",
+    robots: {
+        index: false,
+        follow: true,
+    },
 };
 
 const page = () => {

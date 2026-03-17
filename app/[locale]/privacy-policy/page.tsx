@@ -5,7 +5,12 @@ import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
-    description: "Privacy policy explaining how personal data is collected, used and protected on rinobago.com.",
+    description:
+        "Privacy policy explaining how personal data is collected, used and protected on rinobago.com.",
+    robots: {
+        index: false,
+        follow: true,
+    },
 };
 
 export default async function PrivacyPolicyPage() {
